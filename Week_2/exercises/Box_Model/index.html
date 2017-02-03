@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Box Model</title>
+	<!-- internal css style sheet -->
+	<style type="text/css">
+
+	/*Use the universal selector to remove all of the default margins and padding from every element on the page so you can write your own from scratch*/
+	*{
+		margin: 0; 
+		padding: 0;
+	}
+
+	/* 
+	TAG SELECTOR 
+	Applying styles to the body tag will trickle down to all child elements on the page unless they are overwritten by a more specific tag 
+	*/
+	body {
+		/* if you want to have a constant background color, just apply a background-color tag in the body (box model) property  */
+		/*background-color: black; */
+
+		/* font-family lists three fonts so that if the first one can't load, it will load the second one, and if those two fial then a sans-sesrif font will load as default */
+		font-family: 'Helvectica Neue', Arial, sans-serif;
+		
+		/*color determines the color of the text on the entire website*/
+		color: #555555; 
+
+		/*font-style determines the style for all text on entire site*/
+		/*font-style: italic;*/
+
+	}
+
+	/*First, use a tag selector to apply a background color to every div on the page so you can see how your layouts nests and develops*/
+
+	/*A div is an invisible block that wraps around other elements, i.e. the div wraps around the paragraph element in this example*/
+
+	div{
+		background-color: rgba(0,0,200,0.2);
+	}
+
+	/*Fixed width grid, using pixels*/
+
+	/*.container means that whenever the container class is seen, the following attributes will be applied*/
+	.container{
+		/*starter width in pixels*/
+		/*Divs are elements that display block by default. They want to take up 100% of the available space and they don't want to share horizontal space with another elemnet
+		
+		Block level elements can receive a width and a height to override their default size
+
+		*/
+		width: 900px;
+
+		/*
+		margin helps allign the elements, sets the space around the elements*
+		following margin makes sure that the container/div is centered
+		
+		can center block elements that have a defined width using margin auto for the left and right values
+
+		think of margin as personal space between elements
+		*/
+
+		margin: 0 auto;
+		/*margin-top: 100px;*/
+
+		/*Adding padding will add to your original 900px width, and put space between our container edge and the edge of its child elements*/
+		padding: 10px;
+	}
+
+	.thumbnail{
+		/*Give thumbnails a fixed width of 300px */
+		width: 300px; 
+		height: 300px; 
+		/*
+		float lleft makes the thumbnails stack next to each other, to the left, until no more can fit
+
+		notice when using float by itself, it collapses your container
+		
+		whenever you use float elements, you need to make sure you clear them as well
+		*/
+		float: left;
+
+	}
+
+	/*clear fix 1: adding a clear class to an invisible element on the page*/
+	.clear{
+		/*clear means to not share space on left or right of elements*/
+		clear: both; 
+	}
+
+	/*clear fix right away, use pure css to solve the problem*/
+	.clear-fix::after{
+		/*make sure you have some content to our invisible element in order for it to exist*/
+		content: ' ';
+		display: block;
+		clear: block;
+		/*ensure site is compatiable with older browsers*/
+		height: 0;
+		font-size: 0;
+		visibility: hidden;
+	}
+
+	/*Fluid layout styles using %*/
+	.container-fluid{
+		width: 90%;
+		padding: 2%;
+		margin: 0 auto;
+	}
+
+	.thumbnail-fluid{
+		width: 23%;
+		height: 300px;
+		float: left;
+		margin: 1%;
+	}
+	
+	.thumbnail-border{
+		width: 23%;
+		height: 300px;
+		float: left;
+		margin: 1%;
+		border-width: 5px;
+		/* 300px - 2*10px - 2*5px */
+		width: 270px;
+		padding: 10px;
+		/* 270-*/
+		border-style: solid; 
+		border-color: #0000ff;
+		/* Border: width | style |color; */
+		border: ;
+	}
+	</style>
+	
+
+</head>
+<body>
+	<!-- <div><p> Here is some font to render. </p></div> -->
+	<!-- margin will go here around the parent element -->
+	<h2> Fixed Pixel Based Layout and class=clear</h2>
+	<div class="container">
+	<!-- padding would go here around child elements -->
+		<div class="thumbnail"></div>
+		<div class="thumbnail"></div>
+		<div class="thumbnail"></div>
+		<br class="clear">
+	</div>
+
+	<!-- Preferred way using clearfix in pure css -->
+	<h2> Fixed Pixel Based Layout and clearfix</h2>
+	<div class="container clear-fix">
+	<!-- padding would go here around child elements -->
+		<div class="clear-fix"></div>
+		<div class="clear-fix"></div>
+		<div class="clear-fix"></div>
+	</div>
+
+	<h2> Fluid Percentage Based Layout Using Percentage</h2>
+
+	<div class="container-fluid clear-fix">>
+		<div class="thumbnail-border"></div>
+		<div class="thumbnail-border"></div>
+		<div class="thumbnail-border"></div>
+		<div class="thumbnail-border"></div>
+	</div>
+
+	<h2> Breaking our dimension with margins, padding, and border with padding</h>
+
+	<div class="container-fluid clear-fix">>
+		<div class="thumbnail-border"></div>
+		<div class="thumbnail-border"></div>
+		<div class="thumbnail-border"></div>
+		<div class="thumbnail-border"></div>
+	</div>
+</body>
+</html>
