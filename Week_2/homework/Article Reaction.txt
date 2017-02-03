@@ -1,3 +1,9 @@
 Week 2 HW Part 2
 
-After reading “Five Important Considerations for Wireframing” by Lisa Aguilar, I learned and re-learned things about wireframing. In a previous class, my professor would stress the important of wire framing, but I didn’t take it as seriously as she did. But, after reading the article, I realize that wire framing is truly an important and crucial step to designing a website. In fact, it seems that when designing a website, the design should COMPLETELY follow the wireframe with nothing added or removed. Otherwise, having to come up with a completely new design for the website or having to re-code the website will be a pain. The wireframe also makes sure that all problems are addressed and that it is catered to the audience of users who will be visiting the site. So, my conclusion is that wireframing is the most important part to planning a website’s design, whether it is personal or for a client. 
+After reading “Five Important Considerations for Wireframing” by Lisa Aguilar, I learned and re-learned things about wireframing. In a
+previous class, my professor would stress the important of wire framing, but I didn’t take it as seriously as she did. But, after reading
+the article, I realize that wire framing is truly an important and crucial step to designing a website. In fact, it seems that when
+designing a website, the design should COMPLETELY follow the wireframe with nothing added or removed. Otherwise, having to come up with a 
+completely new design for the website or having to re-code the website will be a pain. The wireframe also makes sure that all problems are
+addressed and that it is catered to the audience of users who will be visiting the site. So, my conclusion is that wireframing is the most
+important part to planning a website’s design, whether it is personal or for a client. 
