@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Recipe Website Semantic Markup</title>
+	<meta name="description" content= "Starter template using semantic HTML to organize code for recipe website">
+	<meta name="keywords" content= "HTML, Semantic HTML, Recipe Site">
+	<meta name="author" content="Stephanie">
+
+	<!-- CSS style sheet -->
+	<style type="text/css">
+		/*adding font and color to the whole website*/
+		body{
+			font-family:  'Avenir', 'Century Gothic', Tahoma, sans-serif;
+			background-color: rgb(255,221,247);
+		}
+
+	</style>
+</head>
+
+<body>
+	<header>
+		<img src="Recipe Website Logo.png">
+		<!-- nav will be horizontal and will be clickable -->
+		<nav>
+			<ul>
+				<li><a href="#">Dessert Recipes</a></li>
+				<li><a href="#">Cakess</a></li>
+				<li><a href="#">Fresh Fruit Roll Cake</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<!-- Title of recipe -->
+		<h1>Fresh Fruit Roll Cake</h1>
+			<!-- ingredients for recipe alligned to the left -->
+			<h2>Ingredients</h2>
+				<ul>
+					<li>Ingredient 1</li>
+					<li>Ingredient 2</li>
+					<li>Ingredient 3</li>
+					<li>Ingredient 4</li>
+					<li>Ingredient 5</li>
+				</ul>
+		<!-- Image of recipe alligned to the right -->
+		<figure>
+			<img src="http://placehold.it/600X400">
+			<figcaption>
+				Fresh Fruit Roll Cake
+				<a href="#">Fresh Fruit Roll Cake</a>
+			</figcaption>
+		</figure>
+
+		<!-- Recipe instructions directly under -->
+		<h2>Recipe Instructions</h2>
+			<ul>
+				<li>Step One</li>
+				<li>Step Two</li>
+				<li>Step Three</li>
+				<li>Step Four</li>
+				<li>Step Six</li>
+				<li>Step Seven</li>
+				<li>Step Eight</li>
+				<li>Step Nine</li>
+				<li>Step Ten</li>
+			</ul>
+		
+		<!-- Recommending other recipes the user should look at -->
+		<h3>We also recommend...</h3>
+		<figure>
+			<a href="#" target = "_blank">
+			<img src = "http://placehold.it/300X200">
+			</a>
+			<figcaption>Birthday Cake Recipe</figcaption>
+		</figure>
+
+		<figure>
+			<a href="#" target = "_blank">
+			<img src = "http://placehold.it/300X200">
+			</a>
+			<figcaption>Apple Pie Recipe</figcaption>
+		</figure>
+
+		<figure>
+			<a href="#" target = "_blank">
+			<img src = "http://placehold.it/300X200">
+			</a>
+			<figcaption>Birthday Cake Recipe</figcaption>
+		</figure>
+	</main>
+
+	<!-- the footer for the recipe site -->
+	<footer>
+		&copy; Recipe Website 2017
+		<a href="#">facebook</a>
+		<a href="#">instagram</a>
+	</footer>
+
+</body>
+</html>
