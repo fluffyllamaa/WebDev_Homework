@@ -93,7 +93,7 @@
 		/*make sure you have some content to our invisible element in order for it to exist*/
 		content: ' ';
 		display: block;
-		clear: block;
+		clear: both;
 		/*ensure site is compatiable with older browsers*/
 		height: 0;
 		font-size: 0;
@@ -108,27 +108,34 @@
 	}
 
 	.thumbnail-fluid{
-		width: 23%;
+		width: 20%;
 		height: 300px;
 		float: left;
 		margin: 1%;
+		/* Border: width | style | color; */
+      	border: 10px dashed red;
 	}
 	
 	.thumbnail-border{
-		width: 23%;
+		width: 300px;
 		height: 300px;
 		float: left;
-		margin: 1%;
+		margin: 10px;
 		border-width: 5px;
 		/* 300px - 2*10px - 2*5px */
 		width: 270px;
 		padding: 10px;
-		/* 270-*/
+		/* 270 - 2*10px-*/
+		width:250px;
 		border-style: solid; 
 		border-color: #0000ff;
 		/* Border: width | style |color; */
-		border: ;
 	}
+
+	p{
+		text-align: justify;
+	}
+
 	</style>
 	
 
@@ -149,25 +156,25 @@
 	<h2> Fixed Pixel Based Layout and clearfix</h2>
 	<div class="container clear-fix">
 	<!-- padding would go here around child elements -->
-		<div class="clear-fix"></div>
-		<div class="clear-fix"></div>
-		<div class="clear-fix"></div>
+		<div class="thumbnail"></div>
+		<div class="thumbnail"></div>
+		<div class="thumbnail"></div>
 	</div>
 
 	<h2> Fluid Percentage Based Layout Using Percentage</h2>
 
-	<div class="container-fluid clear-fix">>
-		<div class="thumbnail-border"></div>
-		<div class="thumbnail-border"></div>
-		<div class="thumbnail-border"></div>
-		<div class="thumbnail-border"></div>
+	<div class="container-fluid clear-fix">
+		<div class="thumbnail-fluid"></div>
+		<div class="thumbnail-fluid"></div>
+		<div class="thumbnail-fluid"></div>
+		<div class="thumbnail-fluid"></div>
 	</div>
 
-	<h2> Breaking our dimension with margins, padding, and border with padding</h>
-
-	<div class="container-fluid clear-fix">>
-		<div class="thumbnail-border"></div>
-		<div class="thumbnail-border"></div>
+	<h2> Breaking our dimension with margins, padding, and border with pixels</h>
+	<div clas="contrainer clear-fix">
+		<div class="thumbnail-border">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec justo sed tortor mollis vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus lobortis efficitur tortor non consectetur. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam erat volutpat. Nam eu posuere ipsum. Integer eu tempor neque. Integer sit amet ipsum turpis.</p>
+		</div>
 		<div class="thumbnail-border"></div>
 		<div class="thumbnail-border"></div>
 	</div>
