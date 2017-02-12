@@ -1,0 +1,52 @@
+/*css reads top to bottom, so must import fonts at top of style sheet*/
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+/*font-family: 'Kaushan Script', cursive;*/
+
+html{ /*html means the entire document*/
+	/*any background image will tile as default so use no-repeat to make image not repeat*/
+	/*url for image file in local directories*/
+	background: url(../img/bg.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover; /*o is operah web browser*/
+	background-size: cover; /*makes imagge full size and stretched to cover the entire website*/
+}
+
+body{
+	font-family: 'Kaushan Script', cursive;
+}
+
+.container{
+	width: 900px;
+	margin: 0 auto;
+}
+
+.polaroid{
+	position: relative;
+	width: 240px;
+	display: inline-block;
+	margin: 20px; 
+}
+
+/*descendant selector to only target images within the polaroid divs*/
+
+.polaroid img{
+	width: 100%;
+	height: auto;
+	/*border = width style color*/
+	border: 10px solid lightpink;
+	/*border-bottom: 45px solid deeppink;*/
+	border-bottom-width: 45px;
+	/*box-shadow: x shadow width | y shadow height | blur | spread | color;*/
+	-webkit-box-shadow: 5px 5px 5px 5px rgba(10,10,10,0.5); /*used for older chrome and safari browsers*/
+	-moz-box-shadow: 5px 5px 5px 5px rgba(10,10,10,0.5); /*used for older mozilla firefox browsers*/
+	box-shadow: 5px 5px 5px 5px rgba(10,10,10,0.5); 
+}
+
+.polaroid p{
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	bottom: 0px;
+	color: #888; /*to change color of font, just use the color attribute*/
+}

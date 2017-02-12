@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+	<meta charset="utf-8">
+	<title>Recipe Website CSS Markup</title>
+	<meta name="description" content= "Starter template using semantic HTML to organize code for recipe website">
+	<meta name="keywords" content= "HTML, Semantic HTML, Recipe Site">
+	<meta name="author" content="Stephanie">
+
+	<!-- CSS style sheet -->
+	<style type="text/css">
+		/*adding font and color to the whole website*/
+
+
+		body{
+			font-family:  'Quicksand', 'Avenir', 'Century Gothic', Tahoma, sans-serif;
+			background-color: rgb(255);
+		}
+
+		header{
+			width:100%;
+			display: block; 
+			background-color: mistyrose;
+			margin:0;
+			padding:0;
+		}
+
+		main{
+			margin: 0;
+			padding-left:10px;
+			padding-right:10px;
+			padding-top:0;
+			padding-bottom:0;
+		}
+
+		header li{
+			display: inline-block;
+			/*text-align:center;
+			text-decoration: none;
+			color: white;*/
+			/*padding: 0px;
+			margin: 0 auto;*/
+		}
+
+		nav{
+			width: 70%;
+			margin: 0;
+			display: inline-block;
+		}
+
+		nav ul{
+			list-style-type: none;
+			overflow: hidden;
+			margin: 0;
+			/*background-color: mistyrose;*/
+			/*text-align: center;*/
+		}
+
+		nav ul li{
+			color: black;
+		}
+
+		nav li{
+			display: inline-block;
+			/*font-size: 15px;*/
+		}
+
+		nav li a{
+			display: block;
+			text-align:center;
+			width: 100px;
+			padding: 5px;
+			margin: 0;
+			/*background-color: mistyrose;*/
+			color: white;
+			text-decoration:none;
+		}
+
+		nav li a:hover{
+			background-color: pink;
+			color: black;
+		}
+
+		nav li a: active{
+			background-color: #bde4f5;
+		}
+
+		main h1{
+			margin-top:10px;
+			margin-bottom:10px;
+		}
+
+		ul.ingredients{
+			list-style-type: square;
+			overflow: hidden;
+			padding-left:50px;
+			
+		}
+
+		li.ingredients{
+			text-align: left;
+			width: 100px;
+			padding: 0px;
+			margin: 0 ;
+		}
+		
+		/*using the div ID to make the elements siblings so that I can make the two elements side by side without the hassle of doing clearfix and using container*/
+		#ingredients, #recipe_photo{
+			float: left;
+			display: inline;
+			width: 50%;
+		}
+		
+		ul.instructions{
+			list-style-type: decimal;
+			overflow: hidden;
+			padding-left: 50px;
+			display: block;
+		}
+		
+		main h3{
+			text-align:center;
+		}
+
+		#recipe1, #recipe2, #recipe3{
+			padding-left: 90px;
+			padding-top:25px;
+			padding-bottom:25px;
+			float:left;
+			display: inline-block;
+			width: 25%;
+			margin-left: auto;
+			margin-right:auto;
+		}
+		
+		figure{
+			text-align: center;
+		}
+
+		figure figcaption{
+			text-align:center;
+		}
+
+		footer{
+			width: 100%;
+			display: inline-block;
+			text-align:center;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		footer a{
+			display: inline-block;
+			text-align: center;
+		}
+
+	</style>
+</head>
+
+<body>
+	<header>
+		<!-- <img src="Recipe Website Logo.png"> -->
+		<!-- nav will be horizontal and will be clickable -->
+		<li><a href="#"><img src="http://placehold.it/100X100"></a></li>
+		<nav>
+			<ul>
+				<!-- <li><a href="#"><img src="http://placehold.it/100X100">Logo</a></li> -->
+				<li><a href="#">Dessert</a></li>
+				<li><a href="#">Cakes</a></li>
+				<li>Fresh Fruit Roll Cake</li>
+				<!-- <li><a href="#">Fresh Fruit Roll Cake</a></li> -->
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<!-- Title of recipe -->
+		<h1>Fresh Fruit Roll Cake</h1>
+			<!-- ingredients for recipe alligned to the left -->
+			<div id = "ingredients">	
+				<h2>Ingredients</h2>
+					<ul class="ingredients">
+						<li class="ingredients">Ingredient 1</li>
+						<li class="ingredients">Ingredient 2</li>
+						<li class="ingredients">Ingredient 3</li>
+						<li class="ingredients">Ingredient 4</li>
+						<li class="ingredients">Ingredient 5</li>
+					</ul>
+			</div>
+		<!-- Image of recipe alligned to the right -->
+			<div id="recipe_photo">	
+				<figure>
+					<img class="recipe_photo" src="http://placehold.it/600X400">
+					<figcaption >
+						<a href="#">Fresh Fruit Roll Cake</a>
+					</figcaption>
+				</figure>
+			</div>
+		<!-- Recipe instructions directly under -->
+		<h2>Recipe Instructions</h2>
+			<ul class="instructions">
+				<li>Step One</li>
+				<li>Step Two</li>
+				<li>Step Three</li>
+				<li>Step Four</li>
+				<li>Step Six</li>
+				<li>Step Seven</li>
+				<li>Step Eight</li>
+				<li>Step Nine</li>
+				<li>Step Ten</li>
+			</ul>
+		
+		<!-- Recommending other recipes the user should look at -->
+		<h3>Other Recommendations</h3>
+		<figure id="recipe1">
+			<a href="#" target = "_blank">
+			<img src = "http://placehold.it/300X200">
+			</a>
+			<figcaption>Birthday Cake Recipe</figcaption>
+		</figure>
+
+		<figure id="recipe2">
+			<a href="#" target = "_blank">
+			<img src = "http://placehold.it/300X200">
+			</a>
+			<figcaption>Apple Pie Recipe</figcaption>
+		</figure>
+
+		<figure id="recipe3">
+			<a href="#" target = "_blank">
+			<img src = "http://placehold.it/300X200">
+			</a>
+			<figcaption>Birthday Cake Recipe</figcaption>
+		</figure>
+	</main>
+
+	<!-- the footer for the recipe site -->
+	<footer>
+		&copy; Recipe Website 2017
+		<a href="#">facebook</a>
+		<a href="#">instagram</a>
+	</footer>
+
+</body>
+</html>

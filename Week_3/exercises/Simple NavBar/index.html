@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic UL Navbar</title>
+
+	<style type="text/css">
+
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		body{
+			font-family: Helvetica, Arial, sans-serif;
+		}
+
+		ul{
+			/*remove bullet points, or to change the list type*/
+			list-style-type: none;
+			margin: 0;
+			padding: 9;
+			overflow: hidden;
+			background-color: lavender;
+		}
+
+		li{
+			/*method one: float*/
+			/*float: left;*/
+			/*method two: inline*/
+			display: inline-block;
+		}
+
+		li a{ /*anchor tags that live within list items*/
+			/*anchor tags by default display inline, we are telling them to behave like a block element. Making the anchor block and adding dimencsions padding we get a bligger clickable area for the user to select.*/
+			display: block;
+			text-align: center;
+			width: 100px;
+			padding: 10px; /*padding is space around box model*/
+			/*remove that ugly underline and color*/
+			color: #333;
+			text-decoration: none;
+		}
+
+		li a:hover{
+			background-color: #111;
+			color: white; 	
+		}
+
+		li a:active{
+			background-color: #888; 
+		}
+
+	</style>
+
+</head>
+<body>
+	<ul>
+		<li><a href="#" class="active">Home</a></li>
+		<li><a href="#" class="active">About</a></li>
+		<li><a href="#" class="active">News</a></li>
+		<li><a href="#" class="active">Blog</a></li>
+		<li><a href="#" class="active">Contact</a></li>
+	</ul>
+</body>
+</html>

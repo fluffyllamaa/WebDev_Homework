@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Inline Block</title>
+  <style type="text/css">
+  	/*use the universal selector to remove all default margins and padding*/
+  	*{
+  		/*border: 1px solid red;*/
+  		margin: 0;
+  		padding: 0;
+  	}
+  	/*use group tag selectors to give a background color*/
+  	/*commas mean and/or, which defines the style class for both main and article tags; group tag selectors*/
+	main, article{
+		/*a = alpha, determinds opacity of color, written in decimal*/
+		background-color: rgba(0,0,255,0.2);
+	}
+	/* This means that this style class only applies when an article tag is the child of a main tag. descendant tag selector
+	main article{
+		background-color: rgba(0,0,255,0.2);
+		}
+	*/
+	main{
+		width: 900px;
+		margin: 0 auto;
+		/*first number is padding on top and bottom, second number is padding left and right
+		padding: 20px 5px;*/
+		padding: 20px;
+	}
+
+	article{
+		width: 300px;
+		height: 300px;
+		/**/
+		display: inline-block; 
+		border: 1px solid #006FFF;
+		/*300px - 2*1px = 298px*/
+		/*negative margin(s) pulls the element(s) towards the left*/
+		margin-right: -4px;
+		width: 298px;
+		margin: 10px;
+		/*298px - 2*10px = 278px;*/
+		width: 274px;
+	}
+
+  </style>
+</head>
+<body>
+<main>
+	<article>1</article>
+	<article>2</article>
+	<article>3</article>
+</main>
+
+</body>
+</html>
