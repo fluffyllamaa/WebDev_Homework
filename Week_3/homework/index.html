@@ -107,24 +107,38 @@
 		
 		/*using the div ID to make the elements siblings so that I can make the two elements side by side without the hassle of doing clearfix and using container*/
 		#ingredients, #recipe_photo{
+			padding-left:100px;
 			float: left;
-			display: inline;
-			width: 50%;
+			display: inline-block;
+			width: 30%;
 		}
 		
-		ul.instructions{
+		/*#instructions{
+			float: left;
+			display: inline-block;
+
+		}*/
+
+		#instructions{
 			list-style-type: decimal;
 			overflow: hidden;
-			padding-left: 50px;
 			display: block;
+			width:1150px;
+			float:left;
+			padding-left: 100px;
 		}
 		
+		#recommendations{
+			float: left;
+		}
+
 		main h3{
 			text-align:center;
+			padding-left:100px;
 		}
 
 		#recipe1, #recipe2, #recipe3{
-			padding-left: 90px;
+			padding-left: 100px;
 			padding-top:25px;
 			padding-bottom:25px;
 			float:left;
@@ -191,48 +205,52 @@
 		<!-- Image of recipe alligned to the right -->
 			<div id="recipe_photo">	
 				<figure>
-					<img class="recipe_photo" src="http://placehold.it/600X400">
+					<img src="http://placehold.it/600X400">
 					<figcaption >
 						<a href="#">Fresh Fruit Roll Cake</a>
 					</figcaption>
 				</figure>
 			</div>
 		<!-- Recipe instructions directly under -->
-		<h2>Recipe Instructions</h2>
-			<ul class="instructions">
-				<li>Step One</li>
-				<li>Step Two</li>
-				<li>Step Three</li>
-				<li>Step Four</li>
-				<li>Step Five</li>
-				<li>Step Six</li>
-				<li>Step Seven</li>
-				<li>Step Eight</li>
-				<li>Step Nine</li>
-			</ul>
+		<div id = "instructions">
+			<h2>Recipe Instructions</h2>
+				<ul >
+					<li>Step One</li>
+					<li>Step Two</li>
+					<li>Step Three</li>
+					<li>Step Four</li>
+					<li>Step Five</li>
+					<li>Step Six</li>
+					<li>Step Seven</li>
+					<li>Step Eight</li>
+					<li>Step Nine</li>
+				</ul>
+		</div>
 		
 		<!-- Recommending other recipes the user should look at -->
-		<h3>Other Recommendations</h3>
-		<figure id="recipe1">
-			<a href="#" target = "_blank">
-			<img src = "http://placehold.it/300X200">
-			</a>
-			<figcaption>Birthday Cake Recipe</figcaption>
-		</figure>
+		<div id="recommendations">
+			<h3>Other Recommendations</h3>
+			<figure id="recipe1">
+				<a href="#" target = "_blank">
+				<img src = "http://placehold.it/300X200">
+				</a>
+				<figcaption>Birthday Cake Recipe</figcaption>
+			</figure>
 
-		<figure id="recipe2">
-			<a href="#" target = "_blank">
-			<img src = "http://placehold.it/300X200">
-			</a>
-			<figcaption>Apple Pie Recipe</figcaption>
-		</figure>
+			<figure id="recipe2">
+				<a href="#" target = "_blank">
+				<img src = "http://placehold.it/300X200">
+				</a>
+				<figcaption>Apple Pie Recipe</figcaption>
+			</figure>
 
-		<figure id="recipe3">
-			<a href="#" target = "_blank">
-			<img src = "http://placehold.it/300X200">
-			</a>
-			<figcaption>Birthday Cake Recipe</figcaption>
-		</figure>
+			<figure id="recipe3">
+				<a href="#" target = "_blank">
+				<img src = "http://placehold.it/300X200">
+				</a>
+				<figcaption>Birthday Cake Recipe</figcaption>
+			</figure>
+		</div>
 	</main>
 
 	<!-- the footer for the recipe site -->
