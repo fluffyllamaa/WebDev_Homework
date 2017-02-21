@@ -1,0 +1,1 @@
+The link to my midterm proposal on my blog is: http://sites.bxmc.poly.edu/~stephaniecen/WebDev/index.php/2017/02/21/midterm-proposal/

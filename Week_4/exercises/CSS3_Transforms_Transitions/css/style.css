@@ -1,0 +1,181 @@
+/*css reads top to bottom, so must import fonts at top of style sheet*/
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+/*font-family: 'Kaushan Script', cursive;*/
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html{ /*html means the entire document*/
+	/*any background image will tile as default so use no-repeat to make image not repeat*/
+	/*url for image file in local directories*/
+	background: url(../img/bg.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover; /*o is operah web browser*/
+	background-size: cover; /*makes imagge full size and stretched to cover the entire website*/
+}
+
+/*NAVIGATION*/
+
+header{
+	width: 80%;
+	/*padding: top/bottom | left/right*/
+	padding: 0 10%;
+	height: 50px;
+	position: fixed;
+	margin-bottom: 10px;
+	/*z-index is when you're reading things and it will pull it to the front ALWAYS. 
+	In this case, it will always make sure the header is at the front of the page, the first thing that 
+	you see (as if it was the first layer in a illustrator file).*/
+	z-index: 10;
+	background-color: black;
+	/*to make a background an image use url(..) <- remmember to get out of folder and jump into folder 
+	with image and into image.*/
+	background-image: url(../img/photography.png);
+}
+
+header h1{
+	display: inline-block;
+	color: black;
+	font-family: 'Kaushan Script', cursive;
+}
+
+nav{
+	float: right;
+	display: inline-block;
+}
+
+nav ul{
+	list-style-type: none;
+	text-align:center;
+	background-color: rgba(180,250,180,.1);
+}
+
+nav li{
+	font-family: Kaushan Script', cursive;
+	font-size: 18px;
+	height: 50px;
+	line-height: 50px;
+	width: 120px;
+	display: inline-block;
+}
+
+nav a{
+	text-decoration: none;
+	color: rgb(255);
+	display: block;
+	/*put transition of an element in the base element*/
+	transition: background-color 1s;
+	/*transition background color change when hovering take one second*/
+}
+
+nav a.active{
+	background-color: pink;
+	color: purple;
+}
+
+nav a:hover, nav a.active:hover{
+	background-color: rgba(10,10,10,0.5);
+}
+
+
+body{
+	font-family: 'Kaushan Script', cursive;
+}
+
+
+/*MAIN GALLERY*/
+
+.container{
+	width: 900px;
+	margin: 0 auto;
+	padding-top:50px;
+}
+
+.polaroid{
+	position: relative;
+	width: 240px;
+	display: inline-block;
+	margin: 20px; 
+}
+
+/*descendant selector to only target images within the polaroid divs*/
+
+.polaroid img{
+	width: 100%;
+	height: auto;
+	/*border = width style color*/
+	border: 10px solid lightpink;
+	/*border-bottom: 45px solid deeppink;*/
+	border-bottom-width: 45px;
+	/*box-shadow: x shadow width | y shadow height | blur | spread | color;*/
+	-webkit-box-shadow: 5px 5px 5px 5px rgba(10,10,10,0.5); /*used for older chrome and safari browsers*/
+	-moz-box-shadow: 5px 5px 5px 5px rgba(10,10,10,0.5); /*used for older mozilla firefox browsers*/
+	box-shadow: 5px 5px 5px 5px rgba(10,10,10,0.5); 
+}
+
+.polaroid p{
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	bottom: 10px;
+	color: #888; /*to change color of font, just use the color attribute*/
+}
+
+/*TRANSFORMS*/
+
+.rotate-left{
+	/*transform | what kind of transformation | angle in degrees*/
+	transform:rotate(-10deg);
+	z-index: 100;
+	transition: all 5s ease;
+}
+
+/*combine transform and transition*/
+.rotate-left:hover{
+	transform: rotate(10deg);
+}
+
+.scale2x{
+	/*transform | what kind of transformation | how many times you want to scale it, number 2=200%*/
+	transform: scale(2);
+	z-index: 50; 
+	transition: all 5s ease;
+}
+
+.scale2x:hover{
+	transform: scale(-2);
+}
+
+.scaleX{
+	/*transform | what kind of transformation | adjust how the x:y ratio is */
+	transform: scale(2,0.5);
+}
+
+.skewX{
+	transform: skewX(20deg);
+}
+
+.skewY{
+	transform: skewY(-20deg);
+}
+
+.skewBoth{
+	transform: skew(10deg,30deg);
+}
+
+/*3D TRANSFORMS that act as if there is a 3D plane, so x would act on x-axis, y on y-axis, z on z-axis*/
+
+.rotX{
+	transform: rotateX(120deg);
+}
+
+.rotY{
+	transform: rotateY(120deg);
+}
+
+.rotZ{
+	transform: rotateZ(120deg);
+}
