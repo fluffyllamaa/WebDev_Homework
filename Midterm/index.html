@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<!-- includng the google font stylesheet through link -->
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+	<meta charset="utf-8">
+	<title>Stephanie Cen</title>
+
+	<!-- things that pop up when website is googled or searched in another search engine -->
+	<meta name="description" content = "Starter template of portfolio website using HTML and CSS">
+	<meta name= "keywords" content="portfolio, Stephanie, HTML, CSS">
+	<meta name = "author" content= "Stephanie">
+
+	<!-- CSS Style Sheet -->
+	<style type="text/css">
+
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		/*setting the defaultfont and color for website*/
+		body{
+			font-family: 'Quicksand', 'Avenir','Century Gothic', Tahoma, sans-serif;
+			background-color: rgb(255); 
+		}
+
+		/*setting the header for the website*/
+		header{
+			width:100%;
+			display: block;
+			background-color: mistyrose;
+			position: fixed;
+			height: 60px;
+		}
+
+		/*styling the list in navbar*/
+		nav ul{
+			list-style-type: none;
+			position: relative;
+		}
+
+		/*styling the list items in lists in navbar*/
+		nav ul li{
+			float:left;
+			width: 200px;
+		}
+
+		/*changing navbar item color on hover*/
+		nav ul li:hover{
+			background: white;
+		}
+
+		/*styling the anchor tags in navbar*/
+		nav ul a{
+			display:block;
+			text-align:center;
+			text-decoration:none;
+			padding: 20px;
+			color: #a9a199;
+		}
+
+		/*secondary navbar*/
+
+		/*hiding secondary navbar*/
+		nav ul ul{
+			display: none;
+			background: black;
+		}
+
+		/*give secondary navbar specific width*/
+		nav ul ul li{
+			background-color: white;
+			width: 100%;
+			/*width: 100vw;*/
+		}
+
+		/*align secondary navbar text left*/
+		nav ul ul a{
+			padding: 15px;
+			text-align:left;
+		}
+
+		/*to make secondary navbar show when parent list is hovered over or when child list is hovered over*/
+		nav ul li:hover > ul{
+			display: block;
+			background-color: white;
+		}
+
+		/*changing color of item when hover in secondary navbar*/
+		nav ul li:hover > ul li a:hover{
+			color:black;
+		}
+
+		/*end of secondary navbar*/
+
+		/*class for homepage image*/
+		.main_image{
+			text-align:center;
+			width: 100vw;
+		}
+
+		/*class for homepage image caption*/
+		.main_image_text{
+			text-align: center;
+		}
+
+	</style>
+
+
+</head>
+
+<body>
+	<header>
+		<nav>
+			<ul>
+				<!-- home page -->
+				<li><a href="./index.html">STEPHANIE CEN</a></li>
+				<!-- portfolio secondary navbar -->
+				<li><a href="#">PORTFOLIO</a>
+					<ul>
+						<!-- design page -->
+						<li><a href="design/index.html">DESIGN</a></li>
+						<!-- film page -->
+						<li><a href="film/index.html">FILM</a></li>
+						<!-- photography page -->
+						<li><a href="photography/index.html">PHOTOGRAPHY</a></li>
+					</ul>
+				</li>
+				<!-- about page -->
+				<li><a href= "about/index.html">ABOUT</a></li>
+				<!-- contact page -->
+				<li><a href="contact/index.html">CONTACT</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<img class="main_image" src="http://placehold.it/1000X500">
+	<figcaption class="main_image_text">DESIGN X FILM X PHOTOGRAPHY</figcaption>
+
+
+</body>
+
+</html>

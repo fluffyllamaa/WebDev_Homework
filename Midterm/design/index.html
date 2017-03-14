@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<!-- includng the google font stylesheet through link -->
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+	<meta charset="utf-8">
+	<title>Stephanie Cen</title>
+
+	<!-- things that pop up when website is googled or searched in another search engine -->
+	<meta name="description" content = "Starter template of portfolio website using HTML and CSS">
+	<meta name= "keywords" content="portfolio, Stephanie, HTML, CSS">
+	<meta name = "author" content= "Stephanie">
+
+	<!-- CSS Style Sheet -->
+	<style type="text/css">
+
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		/*setting the defaultfont and color for website*/
+		body{
+			font-family: 'Quicksand', 'Avenir','Century Gothic', Tahoma, sans-serif;
+			background-color: rgb(255); 
+		}
+
+		/*HEADER*/
+
+		/*setting the header for the website*/
+		header{
+			width:100%;
+			display: block;
+			background-color: mistyrose;
+			position: fixed;
+			height: 60px;
+		}
+		
+		/*styling the list in navbar*/
+		nav ul{
+			list-style-type: none;
+			position: relative;
+		}
+
+		/*styling the list items in lists in navbar*/
+		nav ul li{
+			float:left;
+			width: 200px;
+		}
+
+		/*styling the anchor tags in navbar*/
+		nav ul a{
+			display:block;
+			text-align:center;
+			text-decoration:none;
+			padding: 20px;
+			color: #a9a199;
+		}
+
+		nav ul li a:hover{
+			color: black;
+		}
+
+		/*SECONDARY NAVBAR*/
+
+		/*hiding secondary navbar*/
+		nav ul ul{
+			display: none;
+			background: black;
+		}
+
+		/*give secondary navbar specific width*/
+		nav ul ul li{
+			background-color: white;
+			width: 75%;
+			/*width: 100vw;*/
+		}
+
+		/*align secondary navbar text left*/
+		nav ul ul a{
+			padding: 10px;
+			text-align:left;
+		}
+
+		/*to make secondary navbar show when parent list is hovered over or when child list is hovered over*/
+		nav ul li:hover > ul{
+			display: block;
+			background-color: white;
+		}
+
+		/*changing color of item when hover in secondary navbar*/
+		/*nav ul li:hover > ul li:hover{
+			background: black;
+		}*/
+		
+		/*END OF SECONDARY NAVBAR*/
+
+		/*class to overwrite breadcrumb list item class for dropdown*/
+		li.null li+li:before{
+			content:"00a0";
+		}
+
+		/*class for breadcrumb item specifically without dropdown*/
+		li.breadcrumb_item{
+			color: white;
+			padding:20px;
+			width:200px;
+			text-align:center;
+			display:block;
+		}
+
+		/*classes for styling the breadcrumbs*/
+		ul.breadcrumb{
+			/*padding: 20px;*/
+			list-style:none;
+			background-color: none;
+		}
+		/*displaying items side by side*/
+		ul.breadcrumb li{ 
+			display:block;
+			text-align:center;
+			text-decoration:none;
+			padding: 20px;
+			color: #a9a199;
+		}
+		
+		/*changing item background color on hover*/
+		ul.breadcrumb li:hover{
+			background:white;
+		}
+
+		ul.breadcrumb li.breadcrumb_item:hover{
+			background:none;
+		}
+
+		/*add color on mouse-over to links*/
+		ul.breadcrumb li a:hover{
+			color: black;
+			background-color:white;
+		}
+
+		/*END OF HEADER*/
+
+		/*GRID OF IMAGES*/
+
+		#grid{
+			float: left;
+		}
+		
+		#graphic1{
+		  float:left;
+		  /*position: relative;*/
+		  width: 300px;
+		  display: inline-block;
+		  padding-left:50px;
+		  padding-top:100px;
+		  z-index:-1;
+
+		}
+
+		.images{
+			width:100%;
+			height:300px;
+		}
+
+		.graphic{
+		  position: relative;
+		  width: 300px;
+		  display: inline-block;
+		  padding-left:50px;
+		  padding-top:100px;
+		  z-index:-1;
+		}
+
+		/* descedant selector to only target images within the polaroid divs */
+
+		.graphic img{
+		  width: 100%;
+		  height: auto;
+		  float:left;
+		}
+
+		/*END OF GRID OF IMAGES*/
+
+		/*MODAL*/
+		.infoModal {
+	        position: fixed;
+	        /*top: 0;
+	        right: 0;
+	        bottom: 0;
+	        left: 0;*/
+	        background: rgba(0, 0, 0, 0.2);
+	        z-index: 99999;
+	        opacity: 0;
+	        transition: opacity 400ms ease-in;
+	        pointer-events: none;
+	    }
+	    
+	    .infoModal:target {
+	        opacity: 1;
+	        pointer-events: auto;
+	    }
+	    
+	    .infoModal > div {
+	        width: 300px;
+	        height: 300px;
+	        position: relative;
+	        margin: 10% auto;
+	        padding: 15px;
+	        background: #fff;
+	    }
+	    
+	    .close {
+	        width: 20px;
+	        height: 20px;
+	        background: white;
+	        color: black;
+	        position: absolute;
+	        right: 0px;
+	        text-align: center;
+	        top: 0px;
+	        text-decoration: none;
+	    }
+	    
+	    .close:hover {
+	        background: black;
+	        color: white;
+	    }
+		
+		
+		
+		/*END OF MODAL*/
+		
+	</style>
+	
+	
+
+</head>
+
+<body>
+
+	<!-- HEADER -->
+	<header>
+		<nav>
+			<ul>
+			<!-- home page -->
+			<li><a href="../index.html">STEPHANIE CEN</a></li>
+			</ul>
+
+			<!-- breadcrumbs -->
+			<ul class="breadcrumb">
+				<!-- portfolio secondary navbar -->
+				<li>PORTFOLIO
+					<ul>
+						<!-- film page -->
+						<li class="null"><a href="../film/index.html">FILM</a></li>
+						<!-- photography page -->
+						<li class="null"><a href="../photography/index.html">PHOTOGRAPHY</a></li>
+					</ul>
+				</li>
+				<li class="breadcrumb_item">DESIGN</li>
+			</ul>
+		</nav>
+	</header>
+	<!-- END OF HEADER -->
+	
+	<!-- GRID OF IMAGES -->
+	<div id="grid">
+		
+		<!-- graphic 1 -->
+		
+
+		<div id = "graphic1" class="infoModal"><a href="#graphic1"></a>
+
+			<img class = "images" src="images/Name Project.jpg">
+
+
+		</div>
+
+
+		
+		
+		 
+
+
+	</div>
+	<!-- END OF GRID OF IMAGES  -->
+
+	<!-- MODAL -->
+
+	
+
+	<!-- END OF MODAL -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
