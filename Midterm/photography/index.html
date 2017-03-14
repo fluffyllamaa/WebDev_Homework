@@ -20,8 +20,9 @@
 		*{
 			margin: 0;
 			padding: 0;
+			box-sizing: border-box;
 		}
-
+		
 		/*setting the defaultfont and color for website*/
 		body{
 			font-family: 'Quicksand', 'Avenir','Century Gothic', Tahoma, sans-serif;
@@ -143,9 +144,158 @@
 		}
 
 		/*END OF HEADER*/
-
-
 		
+		/*lightbox*/
+
+		/*.row{
+			overflow:scroll;
+			width:500px;
+			height:210px;
+		}*/
+
+		.row > .column{
+			padding-top: 35vh;
+			padding-right:15px;
+		}
+
+		.row:after{
+			content: "";
+			/*display: table;*/
+			display:inline-block;
+			clear: both;
+		}
+
+		.column{
+			float: left;
+			width: 25%;
+
+		}
+
+		/*end of lightbox*/
+		
+		/*modal*/
+
+		/*modal (background)*/
+		.modal{
+		  display: none;
+		  position: fixed;
+		  z-index: 1;
+		  padding-top: 100px;
+		  left: 0;
+		  top: 0;
+		  width: 100%;
+		  height: 100%;
+		  overflow: auto;
+		  background-color: black;
+		}
+
+		/*modal content*/
+		.modal-content {
+		  position: relative;
+		  background-color: #fefefe;
+		  margin: auto;
+		  padding: 0;
+		  width: 90%;
+		  max-width: 1200px;
+		}
+
+		/* The Close Button */
+		.close {
+		  color: white;
+		  position: absolute;
+		  top: 10px;
+		  right: 25px;
+		  font-size: 35px;
+		  font-weight: bold;
+		}
+
+		.close:hover, .close:focus {
+		  color: #999;
+		  text-decoration: none;
+		  cursor: pointer;
+		}
+
+		/*end of modal*/
+		
+		/*slideshow*/
+
+		.mySlides {
+		  display: none;
+		}
+
+		.cursor{
+			cursor:pointer;
+		}
+
+		/* Next & previous buttons */
+		.prev, .next {
+		  cursor: pointer;
+		  position: absolute;
+		  top: 50%;
+		  width: auto;
+		  padding: 16px;
+		  margin-top: -50px;
+		  color: white;
+		  font-weight: bold;
+		  font-size: 30px;
+		  transition: 0.6s ease;
+		  border-radius: 0 3px 3px 0;
+		  user-select: none;
+		  -webkit-user-select: none;
+		}
+
+		/* Position the "next button" to the right */
+		.next {
+		  right: 0;
+		  border-radius: 3px 0 0 3px;
+		}
+
+		/* On hover, add a black background color with a little bit see-through */
+		.prev:hover, .next:hover {
+		  background-color: rgba(0, 0, 0, 0.8);
+		}
+
+		/* Number text (1/3 etc) */
+		.numbertext {
+		  color: #f2f2f2;
+		  font-size: 12px;
+		  padding: 8px 12px;
+		  position: absolute;
+		  top: 0;
+		}
+
+		img{
+			margin-bottom: -4px;
+			width:100%;
+			max-height: 230px;
+			display:inline-block;
+		}
+
+		.caption-container {
+		  text-align: center;
+		  background-color: black;
+		  padding: 2px 16px;
+		  color: white;
+		}
+
+		.demo {
+		  opacity: 0.6;
+		}
+
+		.active, .demo:hover {
+		  opacity: 1;
+		}
+
+		img.hover-shadow {
+		  transition: 0.3s
+		}
+
+		.hover-shadow:hover {
+		  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+		}
+
+		/*end of slideshow*/
+
 	</style>
 	
 	
@@ -179,30 +329,271 @@
 	</header>
 	<!-- END OF HEADER -->
 	
+	<!-- lightbox modal -->
+		<div class="row">
+
+		</div>
 	
+	<!-- lightbox content -->
+	<div class="row">
+		<!-- park photography -->
+		<div class="column">
+			<img src="images/Ted.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="images/Dictionary.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="images/shoe_park.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+		</div>
+
+		<!-- lines, texture, perspective, reflection -->
+		<div class="column">
+			<img src="images/texture.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="images/Lines.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="images/chain.JPG" onclick="openModal();currentSlide(4)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="images/wall.JPG" onclick="openModal();currentSlide(4)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="images/reflection.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+		</div>
+
+		<!-- color photography -->
+		<div class="column">
+			<img src="images/Bubbles.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="images/Cupcakes.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="images/Shoes.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="images/tictactoe.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="images/red.JPG" onclick="openModal();currentSlide(4)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="images/shoe.JPG" onclick="openModal();currentSlide(4)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="images/white.JPG" onclick="openModal();currentSlide(4)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="images/Spots.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="images/Illustration.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+		</div>
+
+	</div>
+
+	<!-- slide show  -->
+	<div id="myModal" class="modal">
+		<span class="close cursor" onclick="closeModal()">&times;</span>
+		<div class="modal-content">
+
+		<div class="mySlides">
+			<div class="numbertext">1/17</div>
+				<img src="images/Ted.jpg" style="width: 100%">
+		</div>
+
+		<div class="mySlides">
+			<div class="numbertext">2/17</div>
+				<img src="images/Dictionary.jpg" style="width: 100%">
+		</div>
+		
+		<div class="mySlides">
+			<div class="numbertext">3/17</div>
+				<img src="images/shoe_park.jpg" style="width: 100%">
+		</div>
+
+		<div class="mySlides">
+			<div class="numbertext">4/17</div>
+				<img src="images/texture.jpg" style="width: 100%">
+		</div>
+
+		<div class="mySlides">
+			<div class="numbertext">5/17</div>
+				<img src="images/Lines.jpg" style="width: 100%">
+		</div>
+		<div class="mySlides">
+			<div class="numbertext">6/17</div>
+				<img src="images/chain.JPG" style="width: 100%">
+		</div>
+		<div class="mySlides">
+			<div class="numbertext">7/17</div>
+				<img src="images/wall.JPG" style="width: 100%">
+		</div>
+		<div class="mySlides">
+			<div class="numbertext">8/17</div>
+				<img src="images/reflection.jpg" style="width: 100%">
+		</div>
+		<div class="mySlides">
+			<div class="numbertext">9/17</div>
+				<img src="images/Bubbles.jpg" style="width: 100%">
+		</div>
+		<div class="mySlides">
+			<div class="numbertext">10/17</div>
+				<img src="images/Cupcakes.jpg" style="width: 100%">
+		</div>
+		<div class="mySlides">
+			<div class="numbertext">11/17</div>
+				<img src="images/Shoes.jpg" style="width: 100%">
+		</div>
+		<div class="mySlides">
+			<div class="numbertext">12/17</div>
+				<img src="images/tictactoe.jpg" style="width: 100%">
+		</div>
+		<div class="mySlides">
+			<div class="numbertext">13/17</div>
+				<img src="images/red.JPG" style="width: 100%">
+		</div>
+		<div class="mySlides">
+			<div class="numbertext">14/17</div>
+				<img src="images/shoe.JPG" style="width: 100%">
+		</div>
+		<div class="mySlides">
+			<div class="numbertext">15/17</div>
+				<img src="images/white.JPG" style="width: 100%">
+		</div>
+		<div class="mySlides">
+			<div class="numbertext">16/17</div>
+				<img src="images/Spots.jpg" style="width: 100%">
+		</div>
+		<div class="mySlides">
+			<div class="numbertext">17/17</div>
+				<img src="images/Illustration.jpg" style="width: 100%">
+		</div>
+
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+		<!-- image captions when image pops up -->
+			<div class="caption-container">
+				<p id="caption"></p>
+			</div>
+
+			<div class="column">
+				<img class="demo" src="images/Ted.jpg" onclick="currentSlide(1)" alt="Park Photography | 'Ted' ">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="images/Dictionary.jpg" onclick="currentSlide(2)" alt="Park Photography | Dictionary">
+			</div>
+			
+			<div class="column">
+				<img class="demo" src="images/shoe_park.jpg" onclick="currentSlide(3)" alt="Park Photography | Hopscotch">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="images/texture.jpg" onclick="currentSlide(4)" alt="Miscellaneous | Texture">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="images/Lines.jpg" onclick="currentSlide(5)" alt="Miscellaneous | Line">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="images/chain.JPG" onclick="currentSlide(6)" alt="Miscellaneous | Texture">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="images/wall.JPG" onclick="currentSlide(7)" alt="Miscellaneous | Perspective and Line">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="images/reflection.jpg" onclick="currentSlide(8)" alt="Miscellaneous | Reflection">
+			</div>
 
 
+			<div class="column">
+				<img class="demo" src="images/Bubbles.jpg" onclick="currentSlide(9)" alt="Color Photography | Bubbles ">
+			</div>
 
+			<div class="column">
+				<img class="demo" src="images/Cupcakes.jpg" onclick="currentSlide(10)" alt="Color Photography | Cupcakes ">
+			</div>
 
+			<div class="column">
+				<img class="demo" src="images/Shoes.jpg" onclick="currentSlide(11)" alt="Color Photography | Turquoise ">
+			</div>
 
+			<div class="column">
+				<img class="demo" src="images/tictactoe.jpg" onclick="currentSlide(12)" alt="Color Photography | Tic-Tac-Toe ">
+			</div>
 
+			<div class="column">
+				<img class="demo" src="images/red.JPG" onclick="currentSlide(13)" alt="Color Photography | Red ">
+			</div>
 
+			<div class="column">
+				<img class="demo" src="images/shoe.JPG" onclick="currentSlide(14)" alt="Color Photography | A Boy's Shoes ">
+			</div>
 
+			<div class="column">
+				<img class="demo" src="images/white.JPG" onclick="currentSlide(15)" alt="Color Photography | White ">
+			</div>
 
+			<div class="column">
+				<img class="demo" src="images/Spots.jpg" onclick="currentSlide(16)" alt="Color Photography | Colorful Spots ">
+			</div>
 
+			<div class="column">
+				<img class="demo" src="images/Illustration.jpg" onclick="currentSlide(16)" alt="Object Photography | No Face ">
+			</div>
 
+		</div>
+	</div>
 
+<!-- end of lightbox modal -->
 
+<!-- javescript -->
+	<script type="text/javascript">
+		function openModal() {
+		  document.getElementById('myModal').style.display = "block";
+		}
 
+		function closeModal() {
+		  document.getElementById('myModal').style.display = "none";
+		}
 
+		var slideIndex = 1;
+		showSlides(slideIndex);
 
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
 
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
 
-
-
-
-
-
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("demo");
+		  var captionText = document.getElementById("caption");
+		  if (n > slides.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		    slides[i].style.display = "none";
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		    dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";
+		  dots[slideIndex-1].className += " active";
+		  captionText.innerHTML = dots[slideIndex-1].alt;
+		}
+	</script>
 
 </body>
 
