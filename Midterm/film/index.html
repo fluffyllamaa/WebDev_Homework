@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<!-- includng the google font stylesheet through link -->
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+	<meta charset="utf-8">
+	<title>Film</title>
+
+	<!-- things that pop up when website is googled or searched in another search engine -->
+	<meta name="description" content = "Starter template of portfolio website using HTML and CSS">
+	<meta name= "keywords" content="portfolio, Stephanie, HTML, CSS">
+	<meta name = "author" content= "Stephanie">
+
+	<!-- CSS Style Sheet -->
+	<style type="text/css">
+
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		/*setting the defaultfont and color for website*/
+		body{
+			font-family: 'Quicksand', 'Avenir','Century Gothic', Tahoma, sans-serif;
+			background-color: rgb(255); 
+		}
+
+		/*HEADER*/
+
+		/*setting the header for the website*/
+		header{
+			width:100%;
+			display: block;
+			background-color: mistyrose;
+			position: fixed;
+			height: 60px;
+		}
+		
+		/*styling the list in navbar*/
+		nav ul{
+			list-style-type: none;
+			position: relative;
+		}
+
+		/*styling the list items in lists in navbar*/
+		nav ul li{
+			float:left;
+			width: 200px;
+		}
+
+		/*styling the anchor tags in navbar*/
+		nav ul a{
+			display:block;
+			text-align:center;
+			text-decoration:none;
+			padding: 20px;
+			color: #a9a199;
+		}
+
+		nav ul li a:hover{
+			color: black;
+		}
+
+		/*SECONDARY NAVBAR*/
+
+		/*hiding secondary navbar*/
+		nav ul ul{
+			display: none;
+			background: black;
+		}
+
+		/*give secondary navbar specific width*/
+		nav ul ul li{
+			background-color: white;
+			width: 75%;
+			/*width: 100vw;*/
+		}
+
+		/*align secondary navbar text left*/
+		nav ul ul a{
+			padding: 10px;
+			text-align:left;
+		}
+
+		/*to make secondary navbar show when parent list is hovered over or when child list is hovered over*/
+		nav ul li:hover > ul{
+			display: block;
+			background-color: white;
+		}
+
+		/*changing color of item when hover in secondary navbar*/
+		/*nav ul li:hover > ul li:hover{
+			background: black;
+		}*/
+		
+		/*END OF SECONDARY NAVBAR*/
+
+		/*class to overwrite breadcrumb list item class for dropdown*/
+		li.null li+li:before{
+			content:"00a0";
+		}
+
+		/*class for breadcrumb item specifically without dropdown*/
+		li.breadcrumb_item{
+			color: white;
+			padding:20px;
+			width:200px;
+			text-align:center;
+			display:block;
+		}
+
+		/*classes for styling the breadcrumbs*/
+		ul.breadcrumb{
+			/*padding: 20px;*/
+			list-style:none;
+			background-color: none;
+		}
+		/*displaying items side by side*/
+		ul.breadcrumb li{ 
+			display:block;
+			text-align:center;
+			text-decoration:none;
+			padding: 20px;
+			color: #a9a199;
+		}
+		
+		/*changing item background color on hover*/
+		ul.breadcrumb li:hover{
+			background:white;
+		}
+
+		ul.breadcrumb li.breadcrumb_item:hover{
+			background:none;
+		}
+
+		/*add color on mouse-over to links*/
+		ul.breadcrumb li a:hover{
+			color: black;
+			background-color:white;
+		}
+
+		/*END OF HEADER*/
+
+
+		
+	</style>
+	
+	
+
+</head>
+
+<body>
+
+	<!-- HEADER -->
+	<header>
+		<nav>
+			<ul>
+			<!-- home page -->
+			<li><a href="../index.html">STEPHANIE CEN</a></li>
+			</ul>
+
+			<!-- breadcrumbs -->
+			<ul class="breadcrumb">
+				<!-- portfolio secondary navbar -->
+				<li>PORTFOLIO
+					<ul>
+						<!-- film page -->
+						<li class="null"><a href="../design/index.html">DESIGN</a></li>
+						<!-- photography page -->
+						<li class="null"><a href="../photography/index.html">PHOTOGRAPHY</a></li>
+					</ul>
+				</li>
+				<li class="breadcrumb_item">FILM</li>
+			</ul>
+		</nav>
+	</header>
+	<!-- END OF HEADER -->
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
