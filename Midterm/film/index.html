@@ -126,7 +126,7 @@
 			text-decoration:none;
 			padding: 20px;
 		}
-		
+
 		/*changing item background color on hover*/
 		ul.breadcrumb li:hover{
 			background:white;
@@ -143,6 +143,90 @@
 		}
 
 		/*END OF HEADER*/
+
+		/*div container for video*/
+		.video{
+			padding-top: 100px;
+			padding-left:15vw;
+			width: 50vw;
+			height:50vh;
+		}
+		/*end div container*/
+
+		/*slideshow of videos*/
+
+		.cursor{
+			cursor:pointer;
+		}
+
+		/* Next & previous buttons */
+		.prev, .next {
+		  cursor: pointer;
+		  position: absolute;
+		  top: 55%;
+		  width: auto;
+		  padding: 16px;
+		  margin-top: -50px;
+		  color: #a9a199;
+		  font-weight: normal;
+		  font-size: 30px;
+		  transition: 0.6s ease;
+		  border-radius: 0 3px 3px 0;
+		  user-select: none;
+		  -webkit-user-select: none;
+		}
+		
+		/*position "left button" to the left of video*/
+		.prev{
+			left: 150px;
+		}
+
+		/* Position the "next button" to the right of video */
+		.next {
+		  right: 150px;
+		  border-radius: 3px 0 0 3px;
+		}
+
+		/* On hover, add a black background color with a little bit see-through */
+		.prev:hover, .next:hover {
+		  background-color: #fee5e0;
+		}
+
+		.prev_1, .next_1{
+		  cursor: pointer;
+		  position: absolute;
+		  top: 55%;
+		  width: auto;
+		  padding: 16px;
+		  margin-top: -50px;
+		  color: #a9a199;
+		  font-weight: normal;
+		  font-size: 30px;
+		  transition: 0.6s ease;
+		  border-radius: 0 3px 3px 0;
+		  user-select: none;
+		  -webkit-user-select: none;
+		  display:none;
+		}
+
+		.prev_1{
+			;eft:150px;
+		}
+
+		.next_1{
+			right:150px;
+			border-radius: 3px 0 0 3px;
+		}
+
+		/* Number text (1/3 etc) */
+		.numbertext {
+		  color: #f2f2f2;
+		  font-size: 14px;
+		  padding: 8px 12px;
+		  position: absolute;
+		  top: 0;
+		}
+		/*end of slideshow*/
 
 
 		
@@ -179,30 +263,71 @@
 	</header>
 	<!-- END OF HEADER -->
 	
+	<!-- slideshow of videos -->
+
+	<div class="video">
+		<!-- autism documentary -->
+		<iframe id="myVideo" class="mySlides" width="996" height="560" src="https://www.youtube.com/embed/R4dprm-Q-HU?rel=0" ></iframe>
+		<!-- still images film -->
+		<iframe id="myVideo" class="mySlides" width="996" height="560" src="https://www.youtube.com/embed/pY1Gqn7ph6o?rel=0" ></iframe>
+		<!-- silent film -->
+		<iframe id="myVideo" class="mySlides" width="996" height="560" src="https://www.youtube.com/embed/Dc8qHuNU44Y?rel=0" ></iframe>
+		<!-- text animation -->
+		<iframe id="myVideo" class="mySlides" width="996" height="560" src="https://www.youtube.com/embed/ELFBwhVQqjg?rel=0" ></iframe>
+		<!-- narrative film -->
+		<iframe id="myVideo" class="mySlides" width="996" height="560" src="https://www.youtube.com/embed/zSmkOTx7oww?rel=0" ></iframe>
+	</div>
+
+	<!-- previous and next buttons on slideshow -->
+		<a class="prev" onclick="plusDivs(-1)  ">&#10094;</a>
+		<a class="next" onclick="plusDivs(1) ">&#10095;</a>
+		
+	<!-- end of previoius and next buttons -->
 	
+	<!-- end of slideshow -->
+
+	
+	<!-- javascript -->
+	<script>
 
 
 
+	//slideshow
+	var slideIndex = 1;
+	showDivs(slideIndex);
 
+	function plusDivs(n) {
+	  showDivs(slideIndex += n);
+	  
+	}
 
+	function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  if (n > x.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = x.length}
+	  for (i = 0; i < x.length; i++) {
+	     x[i].style.display = "none";  
 
+	  }
+	  x[slideIndex-1].style.display = "block";  
+	}
+	//end of slideshow
 
+	//video play and pause 
+	function toggleVideo(){
+	var myVid = document.getElementById("myVideo");
 
+		if (myVid.paused){
+			myVid.play();
+		} else {
+			myVid.pause(); 
+		}
+		
+	}
+	//end of video play/pause
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</script>
 
 </body>
 
