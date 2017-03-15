@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html>
-
+<!-- **BASE CODE FOR LIGHTBOX/SLIDESHOW/MODAL IS FROM W3SCHOOLS TUTORIAL** -->
 <head>
 	<!-- includng the google font stylesheet through link -->
 	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
@@ -147,14 +147,13 @@
 		
 		/*lightbox*/
 
-		/*.row{
-			overflow:scroll;
-			width:500px;
-			height:210px;
-		}*/
+		.row{
+			white-space: nowrap;
+		}
+
 
 		.row > .column{
-			padding-top: 35vh;
+			/*padding-top: 35vh;*/
 			padding-right:15px;
 		}
 
@@ -166,10 +165,10 @@
 		}
 
 		.column{
-			float: left;
 			width: 25%;
-
+			display:inline-block;
 		}
+
 
 		/*end of lightbox*/
 		
@@ -389,7 +388,6 @@
 		<div class="column">
 			<img src="images/Illustration.jpg" onclick="openModal();currentSlide(17)" class="hover-shadow">
 		</div>
-
 	</div>
 
 	<!-- slide show  -->
@@ -552,7 +550,7 @@
 
 <!-- end of lightbox modal -->
 
-<!-- javescript -->
+<!-- javascript -->
 	<script type="text/javascript">
 		function openModal() {
 		  document.getElementById('myModal').style.display = "block";
