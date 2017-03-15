@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html>
-	<!-- **BASE CODE FOR MODAL IS FROM W3 SCHOOLS TUTORIALS** -->
+	<!-- **BASE CODE FOR MODAL IS FROM W3 SCHOOLS TUTORIALS AND MODIFIED BY MYSELF** -->
 <head>
 	<!-- includng the google font stylesheet through link -->
 	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
@@ -154,6 +154,7 @@
 			padding-right:0;
 			padding-bottom:0px;
 			text-align:center;
+			z-index: -1;
 
 		}
 		/*editing images within container*/
@@ -163,6 +164,13 @@
 			vertical-align: middle;
 
 		}
+		
+		/*class for adding border to an image*/
+		img.border{
+			border-color: rgba(0,0,0,0.03); 
+			border-style: solid; 
+		}
+
 		/*end of container for images*/
 			
 		/*modal*/
@@ -313,8 +321,8 @@
 	<!-- Trigger the Modal / Grid of Images -->
 
 	<!-- graphic 1 -->
-	<div class="graphic">
-		<img id="myImg" src="images/Personal Logo Project.png" alt="Personal Logo Project" >
+	<div class="graphic ">
+		<img id="myImg" class="border" src="images/Personal Logo Project.png" alt="Personal Logo Project" >
 	</div>
 	<!-- graphic 2 -->
 	<div class="graphic">
