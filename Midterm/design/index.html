@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 
 <html>
-
+	<!-- **BASE CODE FOR MODAL IS FROM W3 SCHOOLS TUTORIALS** -->
 <head>
 	<!-- includng the google font stylesheet through link -->
 	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
 	<meta charset="utf-8">
-	<title>Stephanie Cen</title>
+	<title>Design</title>
 
 	<!-- things that pop up when website is googled or searched in another search engine -->
 	<meta name="description" content = "Starter template of portfolio website using HTML and CSS">
@@ -143,97 +143,138 @@
 		}
 
 		/*END OF HEADER*/
-
-		/*GRID OF IMAGES*/
-
-		#grid{
-			float: left;
-		}
 		
-		#graphic1{
-		  float:left;
-		  /*position: relative;*/
-		  width: 300px;
-		  display: inline-block;
-		  /*padding-left:50px;*/
-		  padding-top:100px;
-		  z-index:-1;
-
-		}
-
-		.images{
-			width:100%;
-			height:100%;
-		}
-
+		/*container for images*/
 		.graphic{
-		  position: relative;
-		  width: 300px;
-		  display: inline-block;
-		  padding-left:50px;
-		  padding-top:100px;
-		  z-index:-1;
+			width:400px;
+			height:300px;
+			display:inline-block;
+			padding-left: 40px;
+			padding-top: 100px;
+			padding-right:0;
+			padding-bottom:0px;
+			text-align:center;
+
 		}
-
-		/* descedant selector to only target images within the polaroid divs */
-
+		/*editing images within container*/
 		.graphic img{
-		  width: 100%;
-		  height: auto;
-		  float:left;
+			max-width:100%;
+			max-height:100%;
+			vertical-align: middle;
+
+		}
+		/*end of container for images*/
+			
+		/*modal*/
+
+		/* Style the Image Used to Trigger the Modal */
+		#myImg, 
+		#myImg_2, 
+		#myImg_3, 
+		#myImg_4, 
+		#myImg_5, 
+		#myImg_6, 
+		#myImg_7, 
+		#myImg_8, 
+		#myImg_9, 
+		#myImg_10{
+		    border-radius: 5px;
+		    cursor: pointer;
+		    transition: 0.3s;
 		}
 
-		/*END OF GRID OF IMAGES*/
+		#myImg:hover, 
+		#myImg_2:hover, 
+		#myImg_3:hover, 
+		#myImg_4:hover, 
+		#myImg_5:hover, 
+		#myImg_6:hover, 
+		#myImg_7:hover, 
+		#myImg_8:hover, 
+		#myImg_9:hover, 
+		#myImg_10:hover{opacity: 0.7;}
 
-		/*MODAL*/
-		.infoModal {
-	        position: fixed;
-	        /*top: 0;
-	        right: 0;
-	        bottom: 0;
-	        left: 0;*/
-	        background: rgba(0, 0, 0, 0.2);
-	        z-index: 99999;
-	        opacity: 0;
-	        transition: opacity 400ms ease-in;
-	        pointer-events: none;
-	    }
-	    
-	    .infoModal:target {
-	        opacity: 1;
-	        pointer-events: auto;
-	    }
-	    
-	    .infoModal > div {
-	        width: 300px;
-	        height: 300px;
-	        position: relative;
-	        margin: 10% auto;
-	        padding: 15px;
-	        background: #fff;
-	    }
-	    
-	    .close {
-	        width: 20px;
-	        height: 20px;
-	        background: white;
-	        color: black;
-	        position: absolute;
-	        right: 0px;
-	        text-align: center;
-	        top: 0px;
-	        text-decoration: none;
-	    }
-	    
-	    .close:hover {
-	        background: black;
-	        color: white;
-	    }
-		
-		
-		
-		/*END OF MODAL*/
-		
+		/* The Modal (background) */
+		.modal {
+		    display: none; /* Hidden by default */
+		    position: fixed; /* Stay in place */
+		    z-index: 1; /* Sit on top */
+		    padding-top: 100px; /* Location of the box */
+		    left: 0;
+		    top: 0;
+		    width: 100%; /* Full width */
+		    height: 100%; /* Full height */
+		    overflow: auto; /* Enable scroll if needed */
+		    background-color: rgb(0,0,0); /* Fallback color */
+		    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+		}
+
+		/* Modal Content (Image) */
+		.modal-content {
+		    margin: auto;
+		    display: block;
+		    /*to keep image's regular resolution*/
+		    max-height:100%; 
+		    max-width: 100%;
+		}
+
+		/* Caption of Modal Image (Image Text) - Same Width as the Image */
+		#caption {
+		    margin: auto;
+		    display: block;
+		    width: 80%;
+		    max-width: 700px;
+		    text-align: center;
+		    color: #ccc;
+		    padding: 10px 0;
+		    height: 150px;
+		}
+
+		/* Add Animation - Zoom in the Modal */
+		.modal-content, #caption { 
+		    -webkit-animation-name: zoom;
+		    -webkit-animation-duration: 0.6s;
+		    animation-name: zoom;
+		    animation-duration: 0.6s;
+		}
+
+		@-webkit-keyframes zoom {
+		    from {-webkit-transform:scale(0)} 
+		    to {-webkit-transform:scale(1)}
+		}
+
+		@keyframes zoom {
+		    from {transform:scale(0)} 
+		    to {transform:scale(1)}
+		}
+
+		/* The Close Button */
+		.close {
+		    position: absolute;
+		    top: 15px;
+		    right: 35px;
+		    color: #f1f1f1;
+		    font-size: 40px;
+		    font-weight: bold;
+		    transition: 0.3s;
+		}
+
+		.close:hover,
+		.close:focus {
+		    color: #bbb;
+		    text-decoration: none;
+		    cursor: pointer;
+		}
+
+		/* 100% Image Width on Smaller Screens */
+		@media only screen and (max-width: 700px){
+		    .modal-content {
+		        width: 100%;
+		    }
+		}
+
+		/*end of modal*/
+
 	</style>
 	
 	
@@ -256,9 +297,9 @@
 				<li>PORTFOLIO
 					<ul>
 						<!-- film page -->
-						<li class="null"><a href="../film/index.html">FILM</a></li>
-						<!-- photography page -->
 						<li class="null"><a href="../photography/index.html">PHOTOGRAPHY</a></li>
+						<!-- photography page -->
+						<li class="null"><a href="../film/index.html">FILM</a></li>
 					</ul>
 				</li>
 				<li class="breadcrumb_item">DESIGN</li>
@@ -267,90 +308,204 @@
 	</header>
 	<!-- END OF HEADER -->
 	
-	<!-- GRID OF IMAGES -->
-	<div id="grid">
-		
-		<!-- graphic 1 -->
-		
+	<!-- modal -->
 
-		<div id = "graphic1" class="infoModal"><a href="#graphic1"></a>
+	<!-- Trigger the Modal / Grid of Images -->
 
-			<img class = "images" src="images/Name Project.png">
-
-		</div>
-
-		 <!-- graphic 2 -->
-		<div class="graphic">
-			<img  src="http://placehold.it/300X300">
-		</div>
-		<!-- graphic 3 -->
-		<div class="graphic">
-			<img  src="http://placehold.it/300X300">
-		</div>
-		<!-- graphic 4 -->
-		<div class="graphic">
-			<img  src="http://placehold.it/300X300">
-		</div>
-		<!-- graphic 5 -->
-		<div class="graphic">
-			<img  src="http://placehold.it/300X300">
-		</div>
-		<!-- graphic 6 -->
-		<div class="graphic">
-			<img  src="http://placehold.it/300X300">
-		</div>
-		<!-- graphic 7 -->
-		<div class="graphic">
-			<img  src="http://placehold.it/300X300">
-		</div>
-		<!-- graphic 8 -->
-		<div class="graphic">
-			<img  src="http://placehold.it/300X300">
-		</div>
-		<!-- graphic 9 -->
-		<div class="graphic">
-			<img  src="http://placehold.it/300X300">
-		</div>
-		<!-- graphic 10 -->
-		<div class="graphic">
-			<img  src="http://placehold.it/300X300">
-		</div>
-
-
-		
-		
-		 
-
-
+	<!-- graphic 1 -->
+	<div class="graphic">
+		<img id="myImg" src="images/Personal Logo Project.png" alt="Personal Logo Project" >
 	</div>
-	<!-- END OF GRID OF IMAGES  -->
+	<!-- graphic 2 -->
+	<div class="graphic">
+		<img id="myImg_2" src="images/Business Card Project 3.png" alt="Business Card Project Part 1" >
+	</div>
+	<!-- graphic 3 -->
+	<div class="graphic">
+		<img id="myImg_3" src="images/Business Card Project 2.png" alt="Business Card Project Part 2">
+	</div>
+	<!-- graphic 4 -->
+	<div class="graphic">
+		<img id="myImg_4" src="images/Business Card Project 1.png" alt="Business Card Project Part 3">
+	</div>
+	<!-- graphic 5 -->
+	<div class="graphic">
+		<img id="myImg_5" src="images/Magazine Project.png" alt="Magazine Cover Project">
+	</div>
+	<!-- graphic 6 -->
+	<div class="graphic">
+		<img id="myImg_6" src="images/Illustration Project.png" alt="Illustration Project">
+	</div>
+	<!-- graphic 7 -->
+	<div class="graphic">
+		<img id="myImg_7" src="images/Concept Art.png" alt="Concept Art Project">
+	</div>
+	<!-- graphic 8 -->
+	<div class="graphic">
+		<img id="myImg_8" src="images/Face Vector Project.png" alt="Face Vector Project">
+	</div>
+	<!-- graphic 9 -->
+	<div class="graphic">
+		<img id="myImg_9" src="images/Software Engineering Logo Project.png" alt="Software Engineering Major Logo Project">
+	</div>
+	<!-- graphic 10 -->
+	<div class="graphic">
+		<img id="myImg_10" src="images/Name Project.png" alt="Name Project">
+	</div>
 
-	<!-- MODAL -->
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
 
+		<!-- The Close Button -->
+		<span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+		<!-- Modal Content (The Image) -->
+		<!-- GRAPHIC 1 -->
+		<img class="modal-content" id="img01"> 
+		<!-- GRAPHIC 2 -->
+		<img class="modal-content" id="img02">
+		<!-- GRAPHIC 3 -->
+		<img class="modal-content" id="img03">
+		<!-- GRAPHIC 4 -->
+		<img class="modal-content" id="img04">
+		<!-- GRAPHIC 5 -->
+		<img class="modal-content" id="img05">
+		<!-- GRAPHIC 6 -->
+		<img class="modal-content" id="img06">
+		<!-- GRAPHIC 7 -->
+		<img class="modal-content" id="img07">
+		<!-- GRAPHIC 8 -->
+		<img class="modal-content" id="img08">
+		<!-- GRAPHIC 9 -->
+		<img class="modal-content" id="img09">
+		<!-- GRAPHIC 10 -->
+		<img class="modal-content" id="img10">
+
+		<!-- Modal Caption (Image Text) -->
+		<div id="caption"></div>
 	
+	</div>
 
-	<!-- END OF MODAL -->
+	<!-- end of modal -->
+	
+	<!-- javascript -->
+	<script type="text/javascript">
+
+		// Get the modal
+		var modal = document.getElementById('myModal');
+
+		// Get the image and insert it inside the modal - use its "alt" text as a caption
+
+		//GRAPHIC 1
+		var img = document.getElementById('myImg');
+		var modalImg = document.getElementById("img01");
+		var captionText = document.getElementById("caption");
+		img.onclick = function(){
+		    modal.style.display = "block";
+		    modalImg.src = this.src;
+		    captionText.innerHTML = this.alt;
+		}
+
+		//GRAPHIC 2
+		var img = document.getElementById('myImg_2');
+		var modalImg = document.getElementById("img02");
+		var captionText = document.getElementById("caption");
+		img.onclick = function(){
+		    modal.style.display = "block";
+		    modalImg.src = this.src;
+		    captionText.innerHTML = this.alt;
+		}
+
+		//GRAPHIC 3
+		var img = document.getElementById('myImg_3');
+		var modalImg = document.getElementById("img03");
+		var captionText = document.getElementById("caption");
+		img.onclick = function(){
+		    modal.style.display = "block";
+		    modalImg.src = this.src;
+		    captionText.innerHTML = this.alt;
+		}
+
+		//GRAPHIC 4
+		var img = document.getElementById('myImg_4');
+		var modalImg = document.getElementById("img04");
+		var captionText = document.getElementById("caption");
+		img.onclick = function(){
+		    modal.style.display = "block";
+		    modalImg.src = this.src;
+		    captionText.innerHTML = this.alt;
+		}
+
+		//GRAPHIC 5
+		var img = document.getElementById('myImg_5');
+		var modalImg = document.getElementById("img05");
+		var captionText = document.getElementById("caption");
+		img.onclick = function(){
+		    modal.style.display = "block";
+		    modalImg.src = this.src;
+		    captionText.innerHTML = this.alt;
+		}
+
+		//GRAPHIC 6
+		var img = document.getElementById('myImg_6');
+		var modalImg = document.getElementById("img06");
+		var captionText = document.getElementById("caption");
+		img.onclick = function(){
+		    modal.style.display = "block";
+		    modalImg.src = this.src;
+		    captionText.innerHTML = this.alt;
+		}
+
+		//GRAPHIC 7
+		var img = document.getElementById('myImg_7');
+		var modalImg = document.getElementById("img07");
+		var captionText = document.getElementById("caption");
+		img.onclick = function(){
+		    modal.style.display = "block";
+		    modalImg.src = this.src;
+		    captionText.innerHTML = this.alt;
+		}
+
+		//GRAPHIC 8
+		var img = document.getElementById('myImg_8');
+		var modalImg = document.getElementById("img08");
+		var captionText = document.getElementById("caption");
+		img.onclick = function(){
+		    modal.style.display = "block";
+		    modalImg.src = this.src;
+		    captionText.innerHTML = this.alt;
+		}
+
+		//GRAPHIC 9
+		var img = document.getElementById('myImg_9');
+		var modalImg = document.getElementById("img09");
+		var captionText = document.getElementById("caption");
+		img.onclick = function(){
+		    modal.style.display = "block";
+		    modalImg.src = this.src;
+		    captionText.innerHTML = this.alt;
+		}
+
+		// GRAPHIC 10
+		var img = document.getElementById('myImg_10');
+		var modalImg = document.getElementById("img10");
+		var captionText = document.getElementById("caption");
+		img.onclick = function(){
+		    modal.style.display = "block";
+		    modalImg.src = this.src;
+		    captionText.innerHTML = this.alt;
+		}
 
 
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
 
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() { 
+		  modal.style.display = "none";
+		}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	</script>
 
 
 
