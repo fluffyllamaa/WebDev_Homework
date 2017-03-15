@@ -1,9 +1,267 @@
-<!DOCTYPE html>
 <html>
+
 <head>
+	<!-- includng the google font stylesheet through link -->
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+	<meta charset="utf-8">
 	<title>About</title>
+
+	<!-- things that pop up when website is googled or searched in another search engine -->
+	<meta name="description" content = "Starter template of portfolio website using HTML and CSS">
+	<meta name= "keywords" content="portfolio, Stephanie, HTML, CSS">
+	<meta name = "author" content= "Stephanie">
+
+	<!-- CSS Style Sheet -->
+	<style type="text/css">
+
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		/*setting the defaultfont and color for website*/
+		body{
+			font-family: 'Quicksand', 'Avenir','Century Gothic', Tahoma, sans-serif;
+			background-color: rgb(255); 
+		}
+
+		/*HEADER*/
+
+		/*setting the header for the website*/
+		header{
+			width:100%;
+			display: block;
+			background-color: mistyrose;
+			position: fixed;
+			height: 60px;
+		}
+		
+		/*styling the list in navbar*/
+		nav ul{
+			list-style-type: none;
+			position: relative;
+		}
+
+		/*styling the list items in lists in navbar*/
+		nav ul li{
+			float:left;
+			width: 200px;
+		}
+
+		/*styling the anchor tags in navbar*/
+		nav ul a{
+			display:block;
+			text-align:center;
+			text-decoration:none;
+			padding: 20px;
+			color: #a9a199;
+		}
+
+		nav ul li a:hover{
+			color: black;
+		}
+
+		/*SECONDARY NAVBAR*/
+
+		/*hiding secondary navbar*/
+		nav ul ul{
+			display: none;
+			background: black;
+		}
+
+		/*give secondary navbar specific width*/
+		nav ul ul li{
+			background-color: white;
+			width: 75%;
+			/*width: 100vw;*/
+		}
+
+		/*align secondary navbar text left*/
+		nav ul ul a{
+			padding: 10px;
+			text-align:left;
+		}
+
+		/*to make secondary navbar show when parent list is hovered over or when child list is hovered over*/
+		nav ul li:hover > ul{
+			display: block;
+			background-color: white;
+		}
+
+		/*changing color of item when hover in secondary navbar*/
+		/*nav ul li:hover > ul li:hover{
+			background: black;
+		}*/
+		
+		/*END OF SECONDARY NAVBAR*/
+
+		/*class to overwrite breadcrumb list item class for dropdown*/
+		li.null li+li:before{
+			content:"00a0";
+		}
+
+		/*class for breadcrumb item specifically without dropdown*/
+		li.breadcrumb_item{
+			color: white;
+			padding:20px;
+			width:200px;
+			text-align:center;
+			display:block;
+		}
+
+		/*classes for styling the breadcrumbs*/
+		ul.breadcrumb{
+			/*padding: 20px;*/
+			list-style:none;
+			background-color: none;
+			color: #a9a199;
+		}
+		/*displaying items side by side*/
+		ul.breadcrumb li{ 
+			display:block;
+			text-align:center;
+			text-decoration:none;
+			padding: 20px;
+		}
+
+		/*changing item background color on hover*/
+		ul.breadcrumb li:hover{
+			background:white;
+		}
+
+		ul.breadcrumb li.breadcrumb_item:hover{
+			background:none;
+		}
+
+		/*add color on mouse-over to links*/
+		ul.breadcrumb li a:hover{
+			color: black;
+			background-color:white;
+		}
+
+		/*END OF HEADER*/
+
+		/*div container for video*/
+		.video{
+			padding-top: 100px;
+			padding-left:15vw;
+			width: 50vw;
+			height:50vh;
+		}
+		/*end div container*/
+
+		/*slideshow of videos*/
+
+		.cursor{
+			cursor:pointer;
+		}
+
+		/* Next & previous buttons */
+		.prev, .next {
+		  cursor: pointer;
+		  position: absolute;
+		  top: 55%;
+		  width: auto;
+		  padding: 16px;
+		  margin-top: -50px;
+		  color: #a9a199;
+		  font-weight: normal;
+		  font-size: 30px;
+		  transition: 0.6s ease;
+		  border-radius: 0 3px 3px 0;
+		  user-select: none;
+		  -webkit-user-select: none;
+		}
+		
+		/*position "left button" to the left of video*/
+		.prev{
+			left: 150px;
+		}
+
+		/* Position the "next button" to the right of video */
+		.next {
+		  right: 150px;
+		  border-radius: 3px 0 0 3px;
+		}
+
+		/* On hover, add a black background color with a little bit see-through */
+		.prev:hover, .next:hover {
+		  background-color: #fee5e0;
+		}
+
+		.prev_1, .next_1{
+		  cursor: pointer;
+		  position: absolute;
+		  top: 55%;
+		  width: auto;
+		  padding: 16px;
+		  margin-top: -50px;
+		  color: #a9a199;
+		  font-weight: normal;
+		  font-size: 30px;
+		  transition: 0.6s ease;
+		  border-radius: 0 3px 3px 0;
+		  user-select: none;
+		  -webkit-user-select: none;
+		  display:none;
+		}
+
+		.prev_1{
+			;eft:150px;
+		}
+
+		.next_1{
+			right:150px;
+			border-radius: 3px 0 0 3px;
+		}
+
+		/* Number text (1/3 etc) */
+		.numbertext {
+		  color: #f2f2f2;
+		  font-size: 14px;
+		  padding: 8px 12px;
+		  position: absolute;
+		  top: 0;
+		}
+		/*end of slideshow*/
+
+
+		
+	</style>
+	
+	
+
 </head>
+
 <body>
+
+	<!-- HEADER -->
+	<header>
+		<nav>
+			<ul>
+			<!-- home page -->
+			<li><a href="../index.html">STEPHANIE CEN</a></li>
+			</ul>
+
+			<!-- breadcrumbs -->
+			<ul class="breadcrumb">
+				<li class="breadcrumb_item">ABOUT</li>
+			</ul>
+		</nav>
+	</header>
+	<!-- END OF HEADER -->
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
