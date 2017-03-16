@@ -142,91 +142,67 @@
 
 		/*END OF HEADER*/
 
-		/*div container for video*/
-		.video{
-			padding-top: 100px;
-			padding-left:15vw;
-			width: 50vw;
-			height:50vh;
-		}
-		/*end div container*/
-
-		/*slideshow of videos*/
-
-		.cursor{
-			cursor:pointer;
+		/*class editing the lists within the about info */
+		ul.list{
+			list-style-type: square;
+			overflow:hidden;
+			padding-left:50px;		
 		}
 
-		/* Next & previous buttons */
-		.prev, .next {
-		  cursor: pointer;
-		  position: absolute;
-		  top: 55%;
-		  width: auto;
-		  padding: 16px;
-		  margin-top: -50px;
-		  color: #a9a199;
-		  font-weight: normal;
-		  font-size: 30px;
-		  transition: 0.6s ease;
-		  border-radius: 0 3px 3px 0;
-		  user-select: none;
-		  -webkit-user-select: none;
-		}
-		
-		/*position "left button" to the left of video*/
-		.prev{
-			left: 150px;
+		/*class editing list items*/
+		li.list{
+			text-align:left;
+			width:100%;
+			padding:0;
+			margin:0;
 		}
 
-		/* Position the "next button" to the right of video */
-		.next {
-		  right: 150px;
-		  border-radius: 3px 0 0 3px;
+		/*about info div */
+		.aboutInfo{
+			float:left;
+			width:50vw;
+			height:auto;
+			padding-top:75px;
+			padding-left:25px;
 		}
 
-		/* On hover, add a black background color with a little bit see-through */
-		.prev:hover, .next:hover {
-		  background-color: #fee5e0;
+		/*class for headers in div*/
+		.aboutInfo h3{
+			padding-top:10px;
+			padding-bottom:10px;
+			color:#b3dbda;
 		}
 
-		.prev_1, .next_1{
-		  cursor: pointer;
-		  position: absolute;
-		  top: 55%;
-		  width: auto;
-		  padding: 16px;
-		  margin-top: -50px;
-		  color: #a9a199;
-		  font-weight: normal;
-		  font-size: 30px;
-		  transition: 0.6s ease;
-		  border-radius: 0 3px 3px 0;
-		  user-select: none;
-		  -webkit-user-select: none;
-		  display:none;
+
+
+		/*about info pic div*/
+		.aboutPic{
+			padding-top:100px;
+			padding-left:100px;
+			width: 500px;
+			height:600px;
+			overflow:hidden;
+			position:relative;
+			display:inline-block;
+			padding-left:20px;
+			padding-right:0;
+			z-index:-1;
 		}
 
-		.prev_1{
-			;eft:150px;
+		.aboutPic img{
+			width:100%;
+			height:100%;
+
 		}
 
-		.next_1{
-			right:150px;
-			border-radius: 3px 0 0 3px;
+		.aboutInfo, .aboutPic{
+			/*padding-left:100px;*/
+			float:left;
+			display:inline-block;
+			/*width:30%;*/
 		}
 
-		/* Number text (1/3 etc) */
-		.numbertext {
-		  color: #f2f2f2;
-		  font-size: 14px;
-		  padding: 8px 12px;
-		  position: absolute;
-		  top: 0;
-		}
-		/*end of slideshow*/
-
-
+		/*end of div*/
 		
 	</style>
 	
@@ -235,6 +211,7 @@
 </head>
 
 <body>
+	
 
 	<!-- HEADER -->
 	<header>
@@ -242,26 +219,59 @@
 			<ul>
 			<!-- home page -->
 			<li><a href="../index.html">STEPHANIE CEN</a></li>
+			<!-- portfolio secondary navbar -->
+			<li><a href="#">PORTFOLIO</a>
+				<ul>
+					<!-- design page -->
+					<li><a href="../design/index.html">DESIGN</a></li>
+					<!-- film page -->
+					<li><a href="../film/index.html">FILM</a></li>
+					<!-- photography page -->
+					<li><a href="../photography/index.html">PHOTOGRAPHY</a></li>
+				</ul>
+			</li>
 			</ul>
-
 			<!-- breadcrumbs -->
 			<ul class="breadcrumb">
 				<li class="breadcrumb_item">ABOUT</li>
 			</ul>
+
+			<ul>
+			<li><a href="../contact/index.html">CONTACT</a></li>
+			</ul>
+			
 		</nav>
 	</header>
 	<!-- END OF HEADER -->
 
+	<!-- about info -->
+<div class="aboutInfo">
+	<h3>SCHOOL</h3>
+		<p>New York University Tandon School of Engineering</p>
+	<h3>MAJOR</h3>
+		<p>Integrated Digital Media</p>
+	<h3>GOALS</h3>
+		<p>To learn more about design and web development and hone my skills</p>
+	<h3>ACTIVITIES</h3>
+		<ul class="list">
+			<li class="list">Writer correspondont at Her Campus</li>
+			<li class="list">TRIO Scholars Program</li>
+			<li class="list">Mentor for In-School Youth Program</li>
+		</ul>
+	<h3>SKILLS</h3>
+		<ul class = "list">
+			<li class="list">Adobe Photoshop, Illustrator, InDesign</li>
+			<li class="list">Microsoft Word, PowerPoint, Excel</li>
+			<li class="list">Conversational English, Cantonese, and Spanish</li>
+		</ul>
+	<h3>HOBBIES</h3>
+		<p>Shopping, designing, eating, watching movies, coding, writing, playing video games, talking, traveling, and having fun!</p>	
+</div>
 
-
-
-
-
-
-
-
-
-
+<div class="aboutPic">
+	<img src="images/myChibiAlone-01.png">
+</div>
+	<!-- end of about info -->
 
 </body>
 </html>
