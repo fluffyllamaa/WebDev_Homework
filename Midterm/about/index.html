@@ -167,8 +167,8 @@
 			float:left;
 			width:50vw;
 			height:auto;
-			padding-top:75px;
-			padding-left:25px;
+			padding-top:100px;
+			padding-left:100px;
 		}
 
 		/*class for headers in div*/
@@ -178,20 +178,34 @@
 			color:#b3dbda;
 		}
 
+		/*div and h2 for current page title class*/
+		.currentPage{
+			padding-top: 175px;
+			padding-left: 270px;
+			width:50vw;
+			height:auto;
+			margin: auto;
+		}
 
+		.currentpage h2{
+			color: #a8d1e8;
+			text-align:center;
+			font-size:25px;
+		}
+		/*end of current page title class*/
 
 		/*about info pic div*/
 		.aboutPic{
-			padding-top:100px;
+			/*padding-top:50px;*/
 			padding-left:100px;
-			width: 500px;
-			height:600px;
+			width: 200px;
+			height:300px;
 			overflow:hidden;
 			position:relative;
 			display:inline-block;
-			padding-left:20px;
 			padding-right:0;
 			z-index:-1;
+
 		}
 
 		.aboutPic img{
@@ -225,25 +239,28 @@
 			<!-- home page -->
 			<li><a href="../index.html">STEPHANIE CEN</a></li>
 			<!-- portfolio secondary navbar -->
-			<!-- <li><a href="#">PORTFOLIO</a>
-				<ul> -->
+			 <li><a href="#">PORTFOLIO</a>
+				<ul> 
 					<!-- design page -->
-					<!-- <li><a href="../design/index.html">DESIGN</a></li> -->
+					 <li><a href="../design/index.html">DESIGN</a></li> 
 					<!-- film page -->
-					<!-- <li><a href="../film/index.html">FILM</a></li> -->
+					<li><a href="../film/index.html">FILM</a></li> 
 					<!-- photography page -->
-					<!-- <li><a href="../photography/index.html">PHOTOGRAPHY</a></li>
+					 <li><a href="../photography/index.html">PHOTOGRAPHY</a></li>
 				</ul>
-			</li> -->
+			</li> 
 			</ul>
 			<!-- breadcrumbs -->
-			<ul class="breadcrumb">
+			<!-- <ul class="breadcrumb">
 				<li class="breadcrumb_item">ABOUT</li>
+			</ul> -->
+			<ul >
+				<li><a>ABOUT</a></li>
 			</ul>
 
-			<!-- <ul>
+			 <ul>
 			<li><a href="../contact/index.html">CONTACT</a></li>
-			</ul> -->
+			</ul> 
 			
 		</nav>
 	</header>
@@ -270,8 +287,14 @@
 			<li class="list">Conversational English, Cantonese, and Spanish</li>
 		</ul>
 	<h3>HOBBIES</h3>
-		<p>Shopping, designing, eating, watching movies, coding, writing, playing video games, talking, traveling, and having fun!</p>	
+		<p>Shopping, designing, eating, watching movies, coding, writing, playing video games, traveling, and having fun!</p>	
 </div>
+
+	<!-- current page title -->
+	 <div class="currentPage"> 
+		<h2>About</h2>
+	</div> 
+	<!-- end of current page title -->
 
 <div class="aboutPic">
 	<img src="images/myChibiAlone-01.png">
