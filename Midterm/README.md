@@ -1,0 +1,1 @@
+Link to midterm project: http://sites.bxmc.poly.edu/~stephaniecen/WebDev_HW/Midterm/index.html
