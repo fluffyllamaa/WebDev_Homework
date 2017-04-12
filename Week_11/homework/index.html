@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Function Homework</title>
+	<style type="text/css">
+		.*{
+			margin: 0;
+			padding: 0;
+		}
+
+		.textbox{
+			height: auto; 
+			text-align: center;
+			padding-top: 10%;
+		}
+	</style>
+</head>
+<body>
+	<div class = "textbox">
+		<p onclick = "changeText(this)">This is randomly generated text</p>
+	<div>
+
+	<script type="text/javascript">
+		function changeText(id){
+				var textNum = Math.ceil((Math.random()*10) +1);
+				console.log(textNum);
+				if (textNum === 0){
+					id.innerHTML = "This is the zeroth line."
+				} else if (textNum === 1){
+					id.innerHTML = "This is the first number.";
+				} else if (textNum === 2){
+					id.innerHTML = "This is the second number.";
+				} else if (textNum === 3){
+					id.innerHTML = "This is the third number.";
+				} else if (textNum === 4){
+					id.innerHTML = "This is the fourth number."
+				} else if (textNum ===5) {
+					id.innerHTML = "This is the fifth number."
+				}else if (textNum ===6) {
+					id.innerHTML = "This is the sixth number."
+				}else if (textNum ===7) {
+					id.innerHTML = "This is the seventh number."
+				}else if (textNum ===8) {
+					id.innerHTML = "This is the eigth number."
+				}else if (textNum ===9) {
+					id.innerHTML = "This is the ninth number."
+				}else if (textNum ===10) {
+					id.innerHTML = "This is the tenth number."
+				}
+
+
+			}
+	</script>
+
+</body>
+</html>
