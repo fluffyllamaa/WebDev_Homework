@@ -8,18 +8,32 @@
 			font-size: 20px;
 	    }
 
-	    #email p{
-	    	color: #135589;
-
+	    .email {
+	    	padding-left: 1%;
+	    	text-align:center;
 	    }
 
-	    #email a:active, #email a:visited, #email a:link{
-			text-decoration: none;
+	    .email a{
+	    	font-size: 20px;
+	    	text-decoration:none;
+	    	color: #b3dbda;
+	    }
+		
+		.email a:link{
+			color:none;
+		}
+
+	    .email a:active{  
 			color: none;
 	    }
 
-	    #email a:hover{
-	    	color: lightgray;
+	    .email a:visited{
+	    	text-decoration: none;
+	    	color: none;
+	    }
+
+	    .email a:hover{
+	    	color: pink;
 	    }
 
 		/*contact info pic div*/

@@ -20,7 +20,7 @@
 
     /*styling each section's background color*/
     #home{
-		
+		      
     }
 
     #portfolio{
@@ -28,7 +28,7 @@
     }
 
     #about{
-    	background-color: #d8f7fc;
+    	background-color: #EDFAFD;
 
     }
 
@@ -40,6 +40,7 @@
     h2{
     	text-align:center;
       font-size: 35px;
+      color: #3C2E3D;
     }
 	
 	/*styling paragraph within home section*/

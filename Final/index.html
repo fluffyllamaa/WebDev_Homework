@@ -51,6 +51,28 @@
 			overflow-y:auto;
 		}
 
+		/*styling back to top button*/
+		#topButton {
+			    display: none; /* Hidden by default */
+			    position: fixed; /* Fixed/sticky position */
+			    bottom: 20px; /* Place the button at the bottom of the page */
+			    right: 30px; /* Place the button 30px from the right */
+			    z-index: 99; /* Make sure it does not overlap */
+			    border: none; /* Remove borders */
+			    outline: none; /* Remove outline */
+			    background-color: #a9a199; /* Set a background color */
+			    color: white; /* Text color */
+			    cursor: pointer; /* Add a mouse pointer on hover */
+			    padding: 15px; /* Some padding */
+			    border-radius: 25px; /* Rounded corners */
+			}
+
+		#topButton:hover {
+		    background-color: lavender; /* Add a dark-grey background on hover */
+			}
+
+
+
 	</style>
 
 <body>
@@ -95,6 +117,9 @@
 
 		      </p>
 		     </div>
+		     <!-- <div id="image">
+		     	<img src="images/home/nyc-skyline.png">
+		     </div> -->
 	    </section>
 	    <!-- end of home section -->
 
@@ -523,8 +548,10 @@
 	     <section id="contact">
 	      <h2>CONTACT</h2>
 	      	<div class="contactMe">
-	      		<p>If you'd like to contact me, please send an email to:<br>
-				<a id="email" href="mailto:stephaniecenfung@gmail.com">stephaniecenfung@gmail.com</a></p>
+	      		<p>If you'd like to contact me, please send an email to:</p>
+					<div class="email">
+						<a href="mailto:stephaniecenfung@gmail.com">stephaniecenfung@gmail.com</a>
+					</div>
 			</div>
 				<!-- image -->
 				<div class="contactPic">
@@ -532,6 +559,9 @@
 				</div>
 	    </section>
 		<!-- end of contact section -->
+
+		<!-- back to top button -->
+		<button onclick="topFunction()" id="topButton" title="Go to top">Top</button>
 
 	 </div>
 	<!-- end of scroller -->
@@ -542,9 +572,12 @@
 	var mySplitText = new SplitText("#quote", {type:"words,chars"});
 
 	TweenMax.staggerFrom(mySplitText.words, 1, {x:200, autoAlpha:0, ease: Elastic.easeout}, 0.1);
-
-
 	//end of splittext
+
+	//jacascript for fade in of images on homescreen
+	// var backgroundImage = getElementById("#image");
+
+	// TweenMax.staggerFrom(backgroundImage, 1, {x:-200, autoAlpha:0, ease: Elastic.easeout}, 0.1);
 
 	// javascript for portfolio section
 
@@ -625,6 +658,26 @@
 		  captionText.innerHTML = dots[slideIndex-1].alt;
 		}
 	//end of lightbox
+
+	//back to top button -w3schools tutorial
+		// When the user scrolls down 20px from the top of the document, show the button
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+			    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			        document.getElementById("topButton").style.display = "block";
+			    } else {
+			        document.getElementById("topButton").style.display = "none";
+			    }
+			}
+
+			// When the user clicks on the button, scroll to the top of the document
+			function topFunction() {
+			    document.body.scrollTop = 0; // For Chrome, Safari and Opera 
+			    document.documentElement.scrollTop = 0; // For IE and Firefox
+			}
+
+	//end of button
 
 </script>
 
