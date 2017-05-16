@@ -1,0 +1,199 @@
+styling portfolio section*/
+/*lightbox*/
+		
+		/*outer container*/
+		.row2{
+			overflow-x:hidden;
+			padding:0;
+			margin:0;
+			height:350px;
+		}
+		/*inner container*/
+		.row{
+			white-space: nowrap;
+			overflow-x: scroll;
+			height:300px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			margin: 0;
+		}
+
+		/*styling portfolio labels*/
+		.pLabel{
+			padding-left: 1%;
+			padding-bottom: 0;
+			margin: 0;
+		}
+
+
+		/*affects only column divs nested in row div*/
+		.row > .column{
+			padding-right:15px;
+			padding-top:15vh;
+			padding-bottom:0;
+		}
+
+		.row:after{
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		.column{
+			width: 25%;
+			display:inline-block;
+			padding-left:20px;
+			padding-right:0;
+		}
+		
+		/*class to style images that are too big*/
+		.column_two{
+			width: 300px;
+			height:200px;
+			overflow:hidden;
+			display:inline-block;
+			padding-left:20px;
+			padding-right:0;
+		}
+		
+		/*classes for pictures under active picture in modal*/
+		.row_demo{
+			white-space:nowrap;
+			height:25%;
+			overflow-x:scroll;
+			
+		}
+
+		.column_demo{
+			width:300px;
+			height:200px;
+			overflow:hidden;
+			position:relative;
+			display:inline-block;
+			text-align:center;
+		}
+
+		/*end of lightbox*/
+		
+		/*modal*/
+
+		/*modal (background)*/
+		.modal{
+		  display: none;
+		  position: fixed;
+		  z-index: 1;
+		  padding-top: 100px;
+		  left: 0;
+		  top: 0;
+		  width: 100%;
+		  height: 100%;
+		  overflow: auto;
+		  background-color: black;
+		}
+
+		/*modal content*/
+		.modal-content {
+		  position: relative;
+		  background-color: #fefefe;
+		  margin: auto;
+		  padding: 0;
+		  width: 90%;
+		  max-width: 1200px;
+		}
+
+		/* The Close Button */
+		.close {
+		  color: white;
+		  position: absolute;
+		  top: 10px;
+		  right: 25px;
+		  font-size: 35px;
+		  font-weight: bold;
+		}
+
+		.close:hover, .close:focus {
+		  color: #999;
+		  text-decoration: none;
+		  cursor: pointer;
+		}
+
+		/*end of modal*/
+		
+		/*slideshow*/
+
+		.mySlides {
+		  display: none;
+		}
+
+		.cursor{
+			cursor:pointer;
+		}
+
+		/* Next & previous buttons */
+		.prev, .next {
+		  cursor: pointer;
+		  position: absolute;
+		  top: 50%;
+		  width: auto;
+		  padding: 16px;
+		  margin-top: -50px;
+		  color: white;
+		  font-weight: bold;
+		  font-size: 30px;
+		  transition: 0.6s ease;
+		  border-radius: 0 3px 3px 0;
+		  user-select: none;
+		  -webkit-user-select: none;
+		}
+
+		/* Position the "next button" to the right */
+		.next {
+		  right: 0;
+		  border-radius: 3px 0 0 3px;
+		}
+
+		/* On hover, add a black background color with a little bit see-through */
+		.prev:hover, .next:hover {
+		  background-color: rgba(0, 0, 0, 0.8);
+		}
+
+		/* Number text (1/3 etc) */
+		.numbertext {
+		  color: #f2f2f2;
+		  font-size: 14px;
+		  padding: 8px 12px;
+		  position: absolute;
+		  top: 0;
+		}
+
+		img{
+			margin-bottom: -4px;
+			width:100%;
+			/*max-height: 230px;*/
+			display:inline;
+		}
+
+		.caption-container {
+		  text-align: center;
+		  background-color: black;
+		  padding: 2px 16px;
+		  color: white;
+		}
+
+		.demo {
+		  opacity: 0.6;
+		}
+
+		.active, .demo:hover {
+		  opacity: 1;
+		}
+
+		img.hover-shadow {
+		  transition: 0.3s
+		}
+
+		.hover-shadow:hover {
+		  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+		}
+
+		/*end of slideshow

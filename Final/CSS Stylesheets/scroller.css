@@ -1,0 +1,52 @@
+/*stylesheet for one-page scroller*/
+
+ <style type= "text/css">
+
+ 	body{
+ 		background-color: lightblue;
+ 		color: black;
+ 	}
+    
+
+    #main{
+      margin: 0 auto;
+      width: 100vw;
+    }
+
+    section{
+      padding: 20px 0 80px 0;
+      height: 100vh;    
+    }
+
+    /*styling each section's background color*/
+    #home{
+		
+    }
+
+    #portfolio{
+		background-color: mistyrose;
+    }
+
+    #about{
+    	background-color: #d8f7fc;
+
+    }
+
+    #contact{
+		background-color: #FFFFD4;
+    }
+
+	/*styling the header of each section*/
+    h2{
+    	text-align:center;
+      font-size: 35px;
+    }
+	
+	/*styling paragraph within home section*/
+    #home div{
+		text-align:center;
+		font-size: 75px;
+    }
+
+	
+  </style>

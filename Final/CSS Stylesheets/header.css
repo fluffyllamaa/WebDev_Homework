@@ -1,0 +1,44 @@
+/*stylesheet for header*/
+
+		header{
+			width:100%;
+			display: block;
+			background-color: #fedab2;
+			color: #a9a199;
+			position: relative;
+			height: 60px;
+		}	
+
+		/*styling the list in navbar*/
+		nav ul{
+			list-style-type: none;
+			position: relative;
+		}
+
+		/*styling the list items in lists in navbar*/
+		nav ul li{
+			float: right;
+			text-align: right;
+			width: 200px;
+		}
+
+		/*changing navbar item color on hover*/
+		nav ul li:hover{
+			background: white;
+		}
+
+		/*styling the anchor tags in navbar*/
+		nav ul a{
+			display:block;
+			/*text-align:center;*/
+			text-decoration:none;
+			padding: 20px;
+			color: #a9a199;
+		}
+		
+		/*making navbar headings change color when on hover*/
+		nav ul a:hover{
+			color: black;
+		}
+
+		

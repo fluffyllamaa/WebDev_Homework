@@ -1,0 +1,62 @@
+/*styling about sction */
+
+	/*about info div */
+		.aboutInfo{
+			float:left;
+			width:50vw;
+			height:auto;
+			/*padding-top:100px;*/
+			padding-left:200px;
+		}
+
+		/*class for headers in div*/
+		.aboutInfo h3{
+			padding-top:10px;
+			padding-bottom:10px;
+		
+		}
+
+		/*class editing the lists within the about info */
+		ul.list{
+			list-style-type: square;
+			overflow:hidden;
+			padding-left:50px;		
+		}
+
+		/*class editing list items*/
+		li.list{
+			text-align:left;
+			width:100%;
+			padding:0;
+			margin:0;
+		}
+
+		/*about info pic div*/
+		.aboutPic{
+			/*padding-top:50px;*/
+			padding-left:100px;
+			padding-top:100px;
+			width: 200px;
+			height:300px;
+			overflow:hidden;
+			position:relative;
+			display:inline-block;
+			padding-right:0;
+		}
+
+		.aboutPic img{
+			width:100%;
+			height:100%;
+
+		}
+
+		.aboutInfo, .aboutPic{
+			/*padding-left:100px;*/
+			float:left;
+			display:inline-block;
+			/*width:30%;*/
+		}
+
+		/*end of div*/
+
+	    /*end of about section*/
